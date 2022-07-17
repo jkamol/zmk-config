@@ -53,8 +53,10 @@
         COMBO(left_enter, &kp ENTER, 11 12, 50)
         COMBO(escape, &kp ESCAPE, 21 22, 50)
 
-        COMBO(board_layer_1, &mo BOARD_L, 0 1 2 3, 100)
-        COMBO(board_layer_2, &mo BOARD_L, 6 7 8 9, 100)
+        COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
+        COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
+        COMBO(number_layer, &mo NUM_L, 30 31, 100)
+        COMBO(board_layer, &mo BOARD_L, 26 27 28 29, 100)
     };
 
     behaviors {
