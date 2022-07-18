@@ -13,6 +13,13 @@
     quick-release;
 };
 
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <150>;
+    quick-tap-ms = <50>;
+    global-quick-tap;
+}
+
 #define MAIN_L   0
 #define QWERTY_L 1
 #define SYM_L    2
@@ -107,25 +114,25 @@
         // MAIN
 		main_layer {
 			bindings = <
-                   &base_lt LC(LSHFT) Q &kp W    &kp F         &kp P                &base_lt RALT B         &base_lt RALT J         &kp L               &kp U                   &kp Y           &base_lt RC(RSHFT) SEMICOLON
+                   &mt LC(LSHFT) Q  &kp W        &kp F         &kp P                &mt RALT B              &mt RALT J              &kp L               &kp U                   &kp Y           &mt RC(RSHFT) SEMICOLON
                    &lhm LSHFT A     &lhm LALT R  &kp S         &kp T                &kp G                   &kp M                   &kp N               &kp E                   &kp I           &rhm RSHFT O
-                   &base_lt LCTRL Z &kp X        &kp C         &kp D                &base_lt LGUI V         &base_lt LGUI K         &kp H               &kp COMMA               &kp DOT         &base_lt RCTRL SLASH
-				 /*&                &*/                        &base_lt SYM_L SPACE &base_lt LCTRL TAB      &base_lt FUN_L ENTER    &base_lt NAV_L BSPC                       /*&               &*/
+                   &mt LCTRL Z      &kp X        &kp C         &kp D                &mt LGUI V              &mt LGUI K              &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
+				 /*&                &*/                        &base_lt SYM_L SPACE &mt LCTRL TAB           &base_lt FUN_L ENTER    &base_lt NAV_L BSPC                       /*&               &*/
 			>;  
 		};
 
 		qwerty_layer {
 			bindings = < 
-                   &trans           &trans       &kp E         &kp R                &lhm RALT T             &lhm RALT Y             &kp U               &kp I                   &kp O           &base_lt RC(RSHFT) P
+                   &trans           &trans       &kp E         &kp R                &mt RALT T              &mt RALT Y              &kp U               &kp I                   &kp O           &mt RC(RSHFT) P
                    &trans           &lhm LALT S  &kp D         &kp F                &kp G                   &kp H                   &kp J               &kp K                   &kp L           &rhm RSHFT SEMICOLON
-                   &trans           &trans       &trans        &kp V                &lhm LGUI B             &rhm LGUI N             &kp M               &trans                  &trans          &trans
+                   &trans           &trans       &trans        &kp V                &mt LGUI B              &mt LGUI N              &kp M               &trans                  &trans          &trans
 				 /*&                &*/                        &trans               &trans                  &trans                  &trans                                    /*&               &*/
 			>;      
 		};
 
 		sym_layer {
 			bindings = <
-                   &base_lt LA(F4) N0 &kp N9     &base_lt TASK_MNG N8 &kp N7        &kp N6                  &kp CARET               &kp AMPS            &kp AT                  &kp HASH        &kp DLLR
+                   &mt LA(F4) N0    &kp N9       &mt TASK_MNG N8 &kp N7             &kp N6                  &kp CARET               &kp AMPS            &kp AT                  &kp HASH        &kp DLLR
                    &lhm LSHFT N1    &lhm LALT N2 &kp N3        &kp N4               &kp N5                  &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &rhm LSHFT APOS 
                    &kp BSPC         &kp DEL      &kp LPAR      &kp RPAR             &kp ENTER               &kp PRCNT               &kp LBKT            &kp RBKT                &kp EXCL        &kp BSLH
 				 /*&                &*/                        &trans               &trans                  &trans                  &trans                                    /*&               &*/
