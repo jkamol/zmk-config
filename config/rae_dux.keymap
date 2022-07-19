@@ -63,7 +63,7 @@
         COMBO(numpad_layer_mo, &mo NUMPAD_L, 12 13, 50)
         COMBO(numpad_layer_tog, &tog NUMPAD_L, 13 23, 50)
         COMBO(function_layer, &tog FUN_L, 16 26, 50)
-        COMBO(numrow_layer, &mo NUMROW_L, 30 33, 100)
+        COMBO(function_layer, &mo FUN_L, 30 33, 100)
         COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
         COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
         COMBO(board_layer_l, &mo BOARD_L, 20 21 22 23, 100)
@@ -93,7 +93,7 @@
                    &mt LC(LSHFT) Q  &kp W        &kp F         &kp P                &mt RALT B              &mt RALT J              &kp L               &kp U                   &kp Y           &mt RC(RSHFT) SEMICOLON
                    &hm LSHFT A      &hm LALT R   &kp S         &kp T                &kp G                   &kp M                   &kp N               &kp E                   &kp I           &hm RSHFT O
                    &mt LCTRL Z      &kp X        &kp C         &kp D                &mt LGUI V              &mt LGUI K              &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
-                 /*&                &*/                        &lt SYM_L SPACE      &mt LCTRL TAB           &lt FUN_L ENTER         &lt NAV_L BSPC                            /*&               &*/
+                 /*&                &*/                        &lt SYM_L SPACE      &mt LCTRL TAB           &lt NUMROW_L ENTER      &lt NAV_L BSPC                            /*&               &*/
             >;  
         };
 
@@ -110,7 +110,7 @@
             bindings = <
                    &mt LA(F4) N0    &kp N9       &mt TASK_MNG N8 &kp N7             &kp N6                  &kp CARET               &kp AMPS            &kp AT                  &kp HASH        &kp DLLR
                    &hm LSHFT N1     &hm LALT N2  &kp N3        &kp N4               &kp N5                  &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &hm LSHFT APOS 
-                   &kp LC(Z)        &kp BSPC     &trans        &kp DELETE           &kp ENTER               &kp PRCNT               &kp LBKT            &kp RBKT                &kp EXCL        &kp BSLH
+                   &kp LC(Z)        &kp BSPC     &mt LG(LS(S)) PSCRN &kp DELETE     &kp ENTER               &kp PRCNT               &kp LBKT            &kp RBKT                &kp EXCL        &kp BSLH
                  /*&                &*/                        &trans               &trans                  &trans                  &trans                                    /*&               &*/
                >;
         };
@@ -135,9 +135,9 @@
 
         function_layer {
             bindings = <
-                   &kp PAUSE_BREAK  &kp PSCRN    &kp SLCK      &kp F11              &kp F12                 &trans                  &kp LC(LA(DEL))     &trans                  &trans          &trans
-                   &kp F1           &kp F2       &kp F3        &kp F4               &kp F5                  &trans                  &trans              &mt LG(LS(S)) PSCRN     &trans          &trans
-                   &kp F6           &kp F7       &kp F8        &kp F9               &kp F10                 &trans                  &trans              &trans                  &trans          &trans
+                   &kp PAUSE_BREAK  &kp PSCRN    &kp SLCK      &kp F11              &kp F12                 &kp C_POWER             &kp C_SLEEP         &trans                  &trans          &trans
+                   &kp F1           &kp F2       &kp F3        &kp F4               &kp F5                  &trans                  &trans              &kp C_AL_TEXT_EDITOR    &kp K_CALC      &kp C_AL_CONTROL_PANEL
+                   &kp F6           &kp F7       &kp F8        &kp F9               &kp F10                 &trans                  &kp LC(LA(DEL))     &trans                  &trans          &trans
                  /*&                &*/                        &trans               &trans                  &trans                  &trans                                    /*&               &*/
             >;
         };
