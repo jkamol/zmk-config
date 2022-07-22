@@ -59,6 +59,7 @@
 
         COMBO(enter, &kp ENTER, 11 12, 50)
         COMBO(escape, &kp ESCAPE, 21 22, 50)
+        COMBO(swlang, &kp SW_LANG, 13 16, 50)
 
         COMBO(lalt, &kp LALT, 1 2, 50)
 
