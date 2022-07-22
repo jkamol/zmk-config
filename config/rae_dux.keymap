@@ -103,7 +103,7 @@
             bindings = < 
                    &trans           &trans       &kp E         &kp R                &mt RALT T              &mt RALT Y              &kp U               &kp I                   &kp O           &mt RC(RSHFT) P
                    &trans           &hm LALT S   &kp D         &kp F                &kp G                   &kp H                   &kp J               &kp K                   &kp L           &hm RSHFT SEMICOLON
-                   &trans           &trans       &trans        &kp V                &mt LGUI B              &mt LGUI N              &kp M               &trans                  &trans          &trans
+                   &trans           &trans       &trans        &kp V                &mt LGUI B              &mt RGUI N              &kp M               &trans                  &trans          &trans
                  /*&                &*/                        &trans               &trans                  &trans                  &trans                                    /*&               &*/
             >;      
         };
@@ -130,16 +130,16 @@
             bindings = <
                    &trans           &kp C_VOL_UP &kp LA(UP)    &kp MY_COPY          &kp MY_PASTE            &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
                    &hm LSHFT C_PREV &kp LA(LEFT) &kp C_PP      &kp LA(RIGHT)        &kp C_NEXT              &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &hm RSHFT END
-                   &trans           &kp C_VOL_DN &kp C_MUTE    &none                &kp LGUI                &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &trans
+                   &kp LCTRL        &kp C_VOL_DN &kp C_MUTE    &none                &kp LGUI                &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp RCTRL
                  /*&                &*/                        &trans               &trans                  &trans                  &trans                                    /*&               &*/
             >; 
         };
 
         function_layer {
             bindings = <
-                   &kp N1           &kp N2       &kp N3        &kp N4               &kp PAUSE_BREAK         &kp SLCK                &trans              &trans                  &trans          &trans
-                   &kp F1           &kp F2       &kp F3        &kp F4               &kp F5                  &kp F12                 &kp PSCRN           &trans                  &trans          &trans
-                   &kp F6           &kp F7       &kp F8        &kp F9               &kp F10                 &kp F11                 &kp LC(LA(DEL))     &trans                  &trans          &trans
+                   &kp N1           &kp N2       &kp N3        &kp N4               &kp PAUSE_BREAK         &kp SLCK                &none               &none                   &none           &none
+                   &kp F1           &kp F2       &kp F3        &kp F4               &kp F5                  &kp F12                 &kp PSCRN           &none                   &none           &none
+                   &kp F6           &kp F7       &kp F8        &kp F9               &kp F10                 &kp F11                 &kp LC(LA(DEL))     &none                   &none           &none
                  /*&                &*/                        &trans               &trans                  &trans                  &trans                                    /*&               &*/
             >;
         };
@@ -155,9 +155,9 @@
 
         board_layer {
             bindings = <
-                   &bt BT_SEL 0     &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3         &bt BT_SEL 4            &trans                  &trans              &out OUT_USB            &out OUT_BLE    &out OUT_TOG
-                   &trans           &trans       &trans        &trans               &trans                  &trans                  &trans              &trans                  &trans          &trans
-                   &bt BT_PRV       &bt BT_NXT   &bt BT_CLR    &trans               &bootloader             &bootloader             &trans              &trans                  &trans          &trans
+                   &bt BT_SEL 0     &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3         &bt BT_SEL 4            &none                   &none               &out OUT_USB            &out OUT_BLE    &out OUT_TOG
+                   &none            &none        &none         &none                &none                   &none                   &none               &none                  &trans          &trans
+                   &bt BT_PRV       &bt BT_NXT   &bt BT_CLR    &none                &bootloader             &bootloader             &none               &none                  &trans          &trans
                  /*&                &*/                        &trans               &trans                  &trans                  &trans                                    /*&               &*/
             >;
         };
