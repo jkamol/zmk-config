@@ -54,16 +54,17 @@
           ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
                       ╰────────╯ ╰────────╯            */
 
-        COMBO(left_parenthesis, &kp LPAR, 2 3, 50)
-        COMBO(right_parenthesis, &kp RPAR, 3 4, 50)
+        COMBO(left_parenthesis,  &kp LPAR, 22 23, 50)
+        COMBO(right_parenthesis, &kp RPAR, 23 24, 50)
 
-        COMBO(left_enter, &kp ENTER, 11 12, 50)
+        COMBO(enter, &kp ENTER, 11 12, 50)
         COMBO(escape, &kp ESCAPE, 21 22, 50)
-        COMBO(alt_l, &kp LALT, 12 13, 50)
+
+        COMBO(lalt, &kp LALT, 1 2, 50)
 
         COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
-        COMBO(numpad_layer_tog, &tog NUMPAD_L, 14 24, 50)
-        COMBO(function_layer_tog, &tog FUN_L, 16 26, 50)
+        COMBO(numpad_layer_tg, &tog NUMPAD_L, 14 24, 50)
+        COMBO(function_layer_tg, &tog FUN_L, 15 25, 50)
         COMBO(function_layer_mo, &mo FUN_L, 30 33, 100)
         COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
         COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
@@ -92,7 +93,7 @@
             bindings = <
                    &mt LC(LSHFT) Q  &kp W        &kp F         &kp P                &mt RALT B              &mt RALT J              &kp L               &kp U                   &kp Y           &mt RC(RSHFT) SEMICOLON
                    &hm LSHFT A      &hm LALT R   &kp S         &kp T                &kp G                   &kp M                   &kp N               &kp E                   &kp I           &hm RSHFT O
-                   &mt LCTRL Z      &kp X        &kp C         &kp D                &mt LGUI V              &mt LGUI K              &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
+                   &mt LCTRL Z      &kp X        &kp C         &kp D                &mt LGUI V              &mt RGUI K              &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
                  /*&                &*/                        &lt SYM_L SPACE      &mt LCTRL TAB           &lt NUMROW_L ENTER      &lt NAV_L BSPC                            /*&               &*/
             >;  
         };
@@ -128,7 +129,7 @@
             bindings = <
                    &trans           &kp C_VOL_UP &kp LA(UP)    &kp MY_COPY          &kp MY_PASTE            &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
                    &hm LSHFT C_PREV &kp LA(LEFT) &kp C_PP      &kp LA(RIGHT)        &kp C_NEXT              &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &hm RSHFT END
-                   &trans           &kp C_VOL_DN &kp C_MUTE    &trans               &kp UNDER               &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &trans
+                   &trans           &kp C_VOL_DN &kp C_MUTE    &none                &kp LGUI                &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &trans
                  /*&                &*/                        &trans               &trans                  &trans                  &trans                                    /*&               &*/
             >; 
         };
