@@ -61,7 +61,7 @@
         COMBO(escape, &kp ESCAPE, 21 22, 50)
         COMBO(swlang, &kp SW_LANG, 13 16, 50)
 
-        COMBO(lalt, &kp LALT, 1 2, 50)
+        COMBO(lalt_tg, &kt LALT, 1 2, 50)
 
         COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
         COMBO(numpad_layer_tg, &tog NUMPAD_L, 14 24, 50)
@@ -146,8 +146,8 @@
 
         numpad_layer {
             bindings = <
-                   &kp Q            &kp M        &kp F         &kp P                &kp T                   &kp KP_NUMLOCK          &kp KP_N7           &kp KP_N8               &kp KP_N9         &kp KP_ENTER
-                   &kp N1           &kp N2       &kp N3        &kp N4               &kp N5                  &kp KP_SUBTRACT         &kp KP_N4           &kp KP_N5               &kp KP_N6         &kp KP_PLUS
+                   &kp Q            &kp M        &kp F         &kp P                &kp T                   &mt KP_MULTIPLY KP_NUM  &kp KP_N7           &kp KP_N8               &kp KP_N9         &kp KP_DIVIDE
+                   &kp N1           &kp N2       &kp N3        &kp N4               &kp N5                  &kp KP_PLUS             &kp KP_N4           &kp KP_N5               &kp KP_N6         &kp KP_SUBTRACT
                    &kp Z            &kp ESC      &kp C         &kp S                &kp B                   &kp BACKSPACE           &kp KP_N1           &kp KP_N2               &kp KP_N3         &kp KP_DOT
                  /*&                &*/                        &kp LALT             &trans                  &trans                  &kp KP_N0                                    /*&                 &*/
             >;
