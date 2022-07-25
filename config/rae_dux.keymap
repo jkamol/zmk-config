@@ -137,7 +137,7 @@
             bindings = <
                    &kp EXCL         &kp AT       &kp HASH      &kp DLLR             &kp PRCNT               &kp CARET               &kp AMPS            &kp STAR                &kp LPAR        &kp RPAR
                    &hm LSHFT N1     &kp N2       &kp N3        &kp N4               &kp N5                  &kp N6                  &kp N7              &kp N8                  &kp N9          &hm RSHFT N0
-                   &kp LC(Z)        &kp LC(X)    &kp LC(C)     &kp LC(V)            &kp ENTER               &kp BACKSPACE           &kp DELETE          &kp COMMA               &kp DOT         &mt RCTRL SLASH
+                   &kp LC(Z)        &kp LC(X)    &kp LC(C)     &kp LC(V)            &kp LC(Y)               &kp BACKSPACE           &kp DELETE          &kp COMMA               &kp DOT         &mt RCTRL SLASH
                  /*&                &*/                        &trans               &trans                  &trans                  &trans                                    /*&               &*/
                >;
         };
