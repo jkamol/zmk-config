@@ -14,6 +14,10 @@
     quick-release;
 };
 
+&sl {
+    release-after-ms = <3000>;
+};
+
 &mt {
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -27,6 +31,7 @@
 #define FN_L     5
 #define NUMPAD_L 6
 #define BOARD_L  7
+#define MIRROR_L 8
 
 #define SW_LANG LA(LSHFT)
 #define TASK_MNG LC(LS(ESC))
@@ -62,15 +67,16 @@
           ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
                       ╰────────╯ ╰────────╯            */
 
-        COMBO(left_parenthesis,  &kp LPAR, 2 3, 50)
-        COMBO(right_parenthesis, &kp RPAR, 3 4, 50)
 
         COMBO(enter, &kp ENTER, 11 12, 30)
         COMBO(escape, &kp ESCAPE, 21 22, 30)
         COMBO(swlang, &kp SW_LANG, 13 16, 50)
+        COMBO(left_parenthesis,  &kp LPAR, 2 3, 50)
+        COMBO(right_parenthesis, &kp RPAR, 3 4, 50)
 
         COMBO(lalt_tg, &kt LALT, 1 2, 50)
 
+        COMBO(main_mirror, &sl MIRROR_L, 13 14, 50)
         COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
         COMBO(numpad_layer_tg, &tog NUMPAD_L, 14 24, 50)
         COMBO(function_layer_tg, &tog FN_L, 15 25, 50)
@@ -168,5 +174,15 @@
                  /*&                &*/                        &trans               &trans                  &trans                  &trans                                    /*&               &*/
             >;
         };
+
+        main_mirror {
+            bindings = <
+                   &kp SEMICOLON    &kp Y        &kp U         &kp L                &kp J                   &kp B                   &kp P               &kp F                   &kp W           &kp Q
+                   &kp O            &kp I        &kp E         &kp N                &kp M                   &kp G                   &kp T               &kp S                   &kp R           &kp A
+                   &kp SLASH        &kp DOT      &kp COMMA     &kp H                &kp K                   &kp V                   &kp D               &kp C                   &kp X           &kp Z
+                 /*&                &*/                        &kp BSPC             &kp ENTER               &kp TAB                 &kp SPACE                                 /*&               &*/
+            >;  
+        };
+
     };
 };
