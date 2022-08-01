@@ -70,11 +70,11 @@
 
         COMBO(enter, &kp ENTER, 11 12, 30)
         COMBO(escape, &kp ESCAPE, 21 22, 30)
-        COMBO(swlang, &kp SW_LANG, 13 16, 50)
+        COMBO(lalt, &kp LALT, 10 11, 30)
+
         COMBO(left_parenthesis,  &kp LPAR, 2 3, 50)
         COMBO(right_parenthesis, &kp RPAR, 3 4, 50)
-
-        COMBO(lalt_tg, &kt LALT, 1 2, 50)
+        COMBO(swlang, &kp SW_LANG, 13 16, 50)
 
         COMBO(main_mirror, &sl MIRROR_L, 13 14, 50)
         COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
@@ -132,9 +132,9 @@
 
         nav_layer {
             bindings = <
-                   &trans           &kp C_VOL_UP &kp LA(UP)    &kp MY_COPY          &kp MY_PASTE            &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
-                   &hm LSHFT C_PREV &kp LA(LEFT) &kp C_PP      &kp LA(RIGHT)        &kp C_NEXT              &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &hm RSHFT END
-                   &kp LCTRL        &kp C_VOL_DN &kp C_MUTE    &none                &kp LGUI                &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp RCTRL
+                   &trans           &trans       &trans        &trans               &trans                  &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
+                   &kp LSHFT        &trans       &trans        &trans               &trans                  &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &hm RSHFT END
+                   &kp LCTRL        &trans       &kp MY_COPY   &none                &mt LGUI MY_PASTE       &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp RCTRL
                  /*&                &*/                        &trans               &trans                  &kp RALT                &trans                                    /*&               &*/
             >; 
         };
@@ -150,9 +150,9 @@
 
         function_layer {
             bindings = <
-                   &kp N1           &kp N2       &kp N3        &kp N4               &kp PAUSE_BREAK         &kp SLCK                &none               &none                   &none           &none
-                   &kp F1           &kp F2       &kp F3        &kp F4               &kp F5                  &kp F11                 &none               &none                   &none           &none
-                   &kp F6           &kp F7       &kp F8        &kp F9               &kp F10                 &kp F12                 &none               &none                   &none           &none
+                   &kp N1           &kp N2       &kp N3        &kp N4               &kp PAUSE_BREAK         &kp SLCK                &none               &none                   &kp C_VOL_UP    &none
+                   &kp F1           &kp F2       &kp F3        &kp F4               &kp F5                  &kp F11                 &kp C_PREV          &kp C_PP                &kp C_MUTE      &kp C_NEXT
+                   &kp F6           &kp F7       &kp F8        &kp F9               &kp F10                 &kp F12                 &none               &none                   &kp C_VOL_DN    &none
                  /*&                &*/                        &kp LALT             &mo NUMPAD_L            &trans                  &trans                                    /*&               &*/
             >;
         };
@@ -168,9 +168,9 @@
 
         board_layer {
             bindings = <
-                   &none            &none        &none         &none                &none                   &none                   &none               &out OUT_USB            &out OUT_BLE    &out OUT_TOG
+                   &none            &bt BT_PRV   &bt BT_CLR    &bt BT_NXT           &none                   &none                   &none               &out OUT_USB            &out OUT_BLE    &out OUT_TOG
                    &bt BT_SEL 0     &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3         &bt BT_SEL 4            &none                   &none               &none                   &trans          &trans
-                   &bt BT_PRV       &bt BT_NXT   &bt BT_CLR    &none                &bootloader             &bootloader             &none               &none                   &trans          &trans
+                   &none            &none        &none         &none                &bootloader             &bootloader             &none               &none                   &trans          &trans
                  /*&                &*/                        &trans               &trans                  &trans                  &trans                                    /*&               &*/
             >;
         };
