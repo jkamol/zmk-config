@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 &sk {
@@ -22,6 +23,17 @@
     flavor = "balanced";
     tapping-term-ms = <200>;
 };
+
+// Mouse move
+&mmv {    
+        time-to-max-speed-ms = <500>;
+        acceleration-exponent=<1>;
+};
+// Mouse wheel
+&mwh {    
+        time-to-max-speed-ms = <2000>;
+        acceleration-exponent=<0>;
+}; 
 
 #define MAIN_L   0
 #define QWERTY_L 1
@@ -132,10 +144,10 @@
 
         nav_layer {
             bindings = <
-                   &trans           &trans       &trans        &trans               &trans                  &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
-                   &kp LSHFT        &trans       &trans        &trans               &trans                  &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &hm RSHFT END
-                   &kp LCTRL        &trans       &kp MY_COPY   &none                &mt LGUI MY_PASTE       &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp RCTRL
-                 /*&                &*/                        &trans               &trans                  &kp RALT                &trans                                    /*&               &*/
+                   &trans           &mwh SCROLL_VERT(15)  &mmv MOVE_VERT(-2500) &mkp MCLK &kp RALT          &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
+                   &kp LSHFT        &mmv MOVE_HOR(-2500)  &mmv MOVE_VERT(2500) &mmv MOVE_HOR(2500) &trans   &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &hm RSHFT END
+                   &kp LCTRL        &mwh SCROLL_VERT(-15) &mwh SCROLL_HOR(-15) &mwh SCROLL_HOR(15) &kp LGUI &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp RCTRL
+                 /*&                &*/                        &mkp LCLK            &mkp RCLK               &kp RALT                &trans                                    /*&               &*/
             >; 
         };
 
