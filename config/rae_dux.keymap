@@ -94,8 +94,8 @@
         COMBO(function_layer_tg, &tog FN_L, 15 16 25 26, 50)
         COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
         COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
-        COMBO(board_layer_l, &mo BOARD_L, 20 21 22 23, 100)
-        COMBO(board_layer_r, &mo BOARD_L, 26 27 28 29, 100)
+        COMBO(board_layer_l, &mo BOARD_L, 0 10 20, 100)
+        COMBO(board_layer_r, &mo BOARD_L, 9 19 29, 100)
     };
 
     behaviors {
@@ -180,9 +180,9 @@
 
         board_layer {
             bindings = <
-                   &none            &bt BT_PRV   &bt BT_CLR    &bt BT_NXT           &none                   &none                   &none               &out OUT_USB            &out OUT_BLE    &out OUT_TOG
+                   &none            &none        &none         &none                &none                   &none                   &none               &out OUT_USB            &out OUT_BLE    &out OUT_TOG
                    &bt BT_SEL 0     &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3         &bt BT_SEL 4            &none                   &none               &none                   &trans          &trans
-                   &none            &none        &none         &none                &bootloader             &bootloader             &none               &none                   &trans          &trans
+                   &none            &none        &bt BT_CLR    &none                &bootloader             &bootloader             &none               &none                   &trans          &trans
                  /*&                &*/                        &kp LA(LEFT)         &kp LA(RIGHT)           &trans                  &trans                                    /*&               &*/
             >;
         };
