@@ -144,9 +144,9 @@
 
         nav_layer {
             bindings = <
-                   &trans           &mwh SCROLL_VERT(15)  &mmv MOVE_VERT(-1000) &mkp MCLK &kp RALT          &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
-                   &kp LSHFT        &mmv MOVE_HOR(-1000)  &mmv MOVE_VERT(1000) &mmv MOVE_HOR(1000) &trans   &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &hm RSHFT END
-                   &kp LCTRL        &mwh SCROLL_VERT(-15) &mwh SCROLL_HOR(-15) &mwh SCROLL_HOR(15) &kp LGUI &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp RCTRL
+                   &trans           &mwh SCROLL_VERT(20)  &mmv MOVE_VERT(-1200) &mkp MCLK &kp RALT          &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
+                   &kp LSHFT        &mmv MOVE_HOR(-1200)  &mmv MOVE_VERT(1200) &mmv MOVE_HOR(1200) &trans   &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &hm RSHFT END
+                   &kp LCTRL        &mwh SCROLL_VERT(-20) &mwh SCROLL_HOR(-20) &mwh SCROLL_HOR(20) &kp LGUI &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp RCTRL
                  /*&                &*/                        &mkp LCLK            &mkp RCLK               &kp RALT                &trans                                    /*&               &*/
             >; 
         };
