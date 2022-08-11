@@ -82,11 +82,11 @@
 
         COMBO(enter, &kp ENTER, 11 12, 30)
         COMBO(escape, &kp ESCAPE, 21 22, 30)
-        COMBO(lalt, &kp LALT, 10 11, 30)
 
         COMBO(left_parenthesis,  &kp LPAR, 2 3, 50)
         COMBO(right_parenthesis, &kp RPAR, 3 4, 50)
         COMBO(swlang, &kp SW_LANG, 13 16, 50)
+        COMBO(alt-tab, &kp LA(TAB), 11 21, 50)
 
         COMBO(main_mirror, &sl MIRROR_L, 13 14, 50)
         COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
