@@ -154,7 +154,7 @@
         sym_layer {
             bindings = <
                    &mt LA(F4) N6    &kp N7       &mt TASK_MNG N8 &kp N9             &mt LC(LA(DEL)) N0      /**/ &kp CARET               &kp AMPS            &kp AT                  &kp HASH        &kp DLLR
-                   &mt LSHFT N1     &mt LALT N2  &kp N3        &kp N4               &kp N5                  /**/ &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &mt RSHFT SEMICOLONS 
+                   &mt LSHFT N1     &mt LALT N2  &kp N3        &kp N4               &kp N5                  /**/ &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &mt RSHFT SEMICOLON
                    &mt LCTRL LC(Z)  &kp BSPC     &mt LG(LS(S)) PSCRN &kp DELETE     &mt LGUI LC(Y)          /**/ &kp PRCNT               &kp LBKT            &kp RBKT                &kp EXCL        &kp BSLH
                  /*&                &*/          &mo MIRROR_L  &trans               &trans                  /**/ &none                   &trans              &trans                                /*&               &*/
                >;
