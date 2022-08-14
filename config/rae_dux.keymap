@@ -135,7 +135,7 @@
         // MAIN
         main_layer {
             bindings = <
-                   &mt LC(LSHFT) Q  &kp W        &kp F         &kp P                &mt RALT B              /**/ &mt RALT J              &kp L               &kp U                   &kp Y           &mt RC(RSHFT) SEMICOLON
+                   &mt LC(LSHFT) Q  &kp W        &kp F         &kp P                &mt RALT B              /**/ &mt RALT J              &kp L               &kp U                   &kp Y           &mt RC(RSHFT) APOS
                    &hml LSHFT A     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp M                   &kp N               &kp E                   &kp I           &hmr RSHFT O
                    &mt LCTRL Z      &kp X        &kp C         &kp D                &mt LGUI V              /**/ &mt RGUI K              &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
                  /*&                &*/          &mt LSHFT TAB &lt SYM_L SPACE      &key_repeat             /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER                        /*&               &*/
@@ -154,7 +154,7 @@
         sym_layer {
             bindings = <
                    &mt LA(F4) N6    &kp N7       &mt TASK_MNG N8 &kp N9             &mt LC(LA(DEL)) N0      /**/ &kp CARET               &kp AMPS            &kp AT                  &kp HASH        &kp DLLR
-                   &mt LSHFT N1     &mt LALT N2  &kp N3        &kp N4               &kp N5                  /**/ &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &mt RSHFT APOS 
+                   &mt LSHFT N1     &mt LALT N2  &kp N3        &kp N4               &kp N5                  /**/ &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &mt RSHFT SEMICOLONS 
                    &mt LCTRL LC(Z)  &kp BSPC     &mt LG(LS(S)) PSCRN &kp DELETE     &mt LGUI LC(Y)          /**/ &kp PRCNT               &kp LBKT            &kp RBKT                &kp EXCL        &kp BSLH
                  /*&                &*/          &mo MIRROR_L  &trans               &trans                  /**/ &none                   &trans              &trans                                /*&               &*/
                >;
