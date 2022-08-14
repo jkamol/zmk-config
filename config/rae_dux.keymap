@@ -89,8 +89,9 @@
         COMBO(alt-tab, &kp LA(TAB), 1 2, 30)
         COMBO(enter, &kp ENTER, 11 12, 30)
         COMBO(escape, &kp ESCAPE, 14 24, 30)
-        COMBO(left_parenthesis,  &kp LPAR, 26 27, 30)
-        COMBO(right_parenthesis, &kp RPAR, 27 28, 30)
+        COMBO(lctrl, &kp LCTRL, 30 31, 30)
+        COMBO(lparenthesis, &kp LPAR, 26 27, 30)
+        COMBO(rparenthesis, &kp RPAR, 27 28, 30)
         COMBO(swlang, &kp SW_LANG, 12 13 16 17, 50)
 
         COMBO(main_mirror, &sl MIRROR_L, 13 14, 50)
@@ -137,7 +138,7 @@
                    &mt LC(LSHFT) Q  &kp W        &kp F         &kp P                &mt RALT B              /**/ &mt RALT J              &kp L               &kp U                   &kp Y           &mt RC(RSHFT) SEMICOLON
                    &hml LSHFT A     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp M                   &kp N               &kp E                   &kp I           &hmr RSHFT O
                    &mt LCTRL Z      &kp X        &kp C         &kp D                &mt LGUI V              /**/ &mt RGUI K              &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
-                 /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &key_repeat             /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER                        /*&               &*/
+                 /*&                &*/          &mt LSHFT TAB &lt SYM_L SPACE      &key_repeat             /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER                        /*&               &*/
             >;  
         };
 
