@@ -98,6 +98,7 @@
         COMBO(main_mirror, &sl MIRROR_L, 13 14, 50)
         COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
         COMBO(numpad_layer_tg, &tog NUMPAD_L, 13 14 23 24, 50)
+        COMBO(function_layer_mo, &mo FN_L, 30 31, 30)
         COMBO(function_layer_tg, &tog FN_L, 15 16 25 26, 50)
         COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
         COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
