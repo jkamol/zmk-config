@@ -101,8 +101,8 @@
         COMBO(function_layer_tg, &tog FN_L, 15 16 25 26, 50)
         COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
         COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
-        COMBO(board_layer_l, &mo BOARD_L, 0 10 20, 100)
-        COMBO(board_layer_r, &mo BOARD_L, 9 19 29, 100)
+        COMBO(board_layer_l, &sl BOARD_L, 0 10 20, 100)
+        COMBO(board_layer_r, &sl BOARD_L, 9 19 29, 100)
     };
 
     behaviors {
