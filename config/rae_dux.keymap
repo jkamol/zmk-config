@@ -89,8 +89,8 @@
         COMBO(alt-tab, &kp LA(TAB), 1 2, 30)
         COMBO(enter, &kp ENTER, 11 12, 30)
         COMBO(escape, &kp ESCAPE, 14 24, 30)
-        COMBO(lparenthesis, &kp LPAR, 26 27, 30)
-        COMBO(rparenthesis, &kp RPAR, 27 28, 30)
+        COMBO(lparenthesis, &kp LPAR, 25 26, 30)
+        COMBO(rparenthesis, &kp RPAR, 26 27, 30)
         COMBO(swlang, &kp SW_LANG, 12 13 16 17, 50)
 
         COMBO(main_mirror, &sl MIRROR_L, 13 14, 50)
