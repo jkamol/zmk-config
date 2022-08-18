@@ -98,7 +98,6 @@
         COMBO(main_mirror, &sl MIRROR_L, 13 14, 50)
         COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
         COMBO(numpad_layer_tg, &tog NUMPAD_L, 13 14 23 24, 50)
-        COMBO(function_layer_mo, &mo FN_L, 30 31, 30)
         COMBO(function_layer_tg, &tog FN_L, 15 16 25 26, 50)
         COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
         COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
@@ -162,7 +161,7 @@
                    &mt LC(LSHFT) Q  &kp W        &kp F         &kp P                &mtl RALT B             /**/ &mtr RALT J             &kp L               &kp U                   &kp Y           &mt RC(RSHFT) APOS
                    &hml LSHFT A     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp M                   &kp N               &kp E                   &kp I           &hmr RSHFT O
                    &mt LCTRL Z      &kp X        &kp C         &kp D                &mt LGUI V              /**/ &mt RGUI K              &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
-                 /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &key_repeat             /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER        /*&               &*/
+                 /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &kp LSHFT               /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER        /*&               &*/
             >;  
         };
 
@@ -180,7 +179,7 @@
                    &mt LA(F4) N6    &kp N7       &mt TASK_MNG N8 &kp N9             &mt LC(LA(DEL)) N0      /**/ &kp CARET               &kp AMPS            &kp AT                  &kp HASH        &kp DLLR
                    &mt LSHFT N1     &mt LALT N2  &kp N3        &kp N4               &kp N5                  /**/ &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &mt RSHFT SEMICOLON
                    &mt LCTRL LC(Z)  &kp BSPC     &mt LG(LS(S)) PSCRN &kp DELETE     &mt LGUI LC(Y)          /**/ &kp PRCNT               &kp LBKT            &kp RBKT                &kp EXCL        &kp BSLH
-                 /*&                &*/          &mo MIRROR_L  &trans               &trans                  /**/ &none                   &trans              &trans                /*&               &*/
+                 /*&                &*/          &mo FN_L      &trans               &mo MIRROR_L            /**/ &none                   &trans              &trans                /*&               &*/
                >;
         };
 
@@ -207,7 +206,7 @@
                    &kp N1           &kp N2       &kp N3        &kp N4               &kp PAUSE_BREAK         /**/ &kp SLCK                &none               &none                   &kp C_VOL_UP    &none
                    &kp F1           &kp F2       &kp F3        &kp F4               &kp F5                  /**/ &kp F11                 &kp C_PREV          &kp C_PP                &kp C_MUTE      &kp C_NEXT
                    &kp F6           &kp F7       &kp F8        &kp F9               &kp F10                 /**/ &kp F12                 &none               &none                   &kp C_VOL_DN    &none
-                 /*&                &*/          &mo NUMPAD_L  &kp LALT             &trans                  /**/ &none                   &trans              &trans                /*&               &*/
+                 /*&                &*/          &trans        &kp LALT             &mo NUMPAD_L            /**/ &none                   &trans              &trans                /*&               &*/
             >;
         };
 
