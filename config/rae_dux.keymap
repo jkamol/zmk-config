@@ -107,7 +107,7 @@
     };
 
     behaviors {
-        hml: home-row-left  {
+        hml: home-row-left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_LEFT";
             #binding-cells = <2>;
@@ -118,7 +118,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R EXTRA_L THUMBS>;
         };
-        hmr: home-row-right  {
+        hmr: home-row-right {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_RIGHT";
             #binding-cells = <2>;
@@ -129,7 +129,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L EXTRA_R THUMBS>;
         };
-        mtl: mod-tap-left  {
+        mtl: mod-tap-left {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_TAP_LEFT";
             #binding-cells = <2>;
@@ -140,7 +140,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
         };
-        mtr: mod-tap-right  {
+        mtr: mod-tap-right {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_TAP_RIGHT";
             #binding-cells = <2>;
@@ -162,7 +162,7 @@
                    &mt LC(LSHFT) Q  &kp W        &kp F         &kp P                &mtl RALT B             /**/ &mtr RALT J             &kp L               &kp U                   &kp Y           &mt RC(RSHFT) APOS
                    &hml LSHFT A     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp M                   &kp N               &kp E                   &kp I           &hmr RSHFT O
                    &mt LCTRL Z      &kp X        &kp C         &kp D                &mt LGUI V              /**/ &mt RGUI K              &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
-                 /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &key_repeat             /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER                        /*&               &*/
+                 /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &key_repeat             /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER        /*&               &*/
             >;  
         };
 
@@ -171,7 +171,7 @@
                    &trans           &trans       &kp E         &kp R                &mtl RALT T             /**/ &mtr RALT Y             &kp U               &kp I                   &kp O           &mt RC(RSHFT) P
                    &trans           &hml LALT S  &kp D         &kp F                &kp G                   /**/ &kp H                   &kp J               &kp K                   &kp L           &hmr RSHFT SEMICOLON
                    &trans           &trans       &trans        &kp V                &mt LGUI B              /**/ &mt RGUI N              &kp M               &trans                  &trans          &trans
-                 /*&                &*/          &trans        &trans               &trans                  /**/ &none                   &trans              &trans                                /*&               &*/
+                 /*&                &*/          &trans        &trans               &trans                  /**/ &none                   &trans              &trans                /*&               &*/
             >;      
         };
 
@@ -180,7 +180,7 @@
                    &mt LA(F4) N6    &kp N7       &mt TASK_MNG N8 &kp N9             &mt LC(LA(DEL)) N0      /**/ &kp CARET               &kp AMPS            &kp AT                  &kp HASH        &kp DLLR
                    &mt LSHFT N1     &mt LALT N2  &kp N3        &kp N4               &kp N5                  /**/ &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &mt RSHFT SEMICOLON
                    &mt LCTRL LC(Z)  &kp BSPC     &mt LG(LS(S)) PSCRN &kp DELETE     &mt LGUI LC(Y)          /**/ &kp PRCNT               &kp LBKT            &kp RBKT                &kp EXCL        &kp BSLH
-                 /*&                &*/          &mo MIRROR_L  &trans               &trans                  /**/ &none                   &trans              &trans                                /*&               &*/
+                 /*&                &*/          &mo MIRROR_L  &trans               &trans                  /**/ &none                   &trans              &trans                /*&               &*/
                >;
         };
 
@@ -189,7 +189,7 @@
                    &trans           &mwh SCROLL_VERT(20)  &mmv MOVE_VERT(-1600) &mkp MCLK &kp LALT          /**/ &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
                    &kp LSHFT        &mmv MOVE_HOR(-1600)  &mmv MOVE_VERT(1600) &mmv MOVE_HOR(1600) &trans   /**/ &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &mt RSHFT END
                    &kp LCTRL        &mwh SCROLL_VERT(-20) &mwh SCROLL_HOR(-20) &mwh SCROLL_HOR(20) &kp LGUI /**/ &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp RCTRL
-                 /*&                &*/          &mkp RCLK     &mkp LCLK            &trans                  /**/ &none                   &trans              &kp LALT                              /*&               &*/
+                 /*&                &*/          &mkp RCLK     &mkp LCLK            &trans                  /**/ &none                   &trans              &kp LALT              /*&               &*/
             >; 
         };
 
@@ -198,7 +198,7 @@
                    &kp EXCL         &kp AT       &kp HASH      &kp DLLR             &kp PRCNT               /**/ &kp CARET               &kp AMPS            &kp STAR                &kp LPAR        &kp RPAR
                    &mt LSHFT N1     &kp N2       &kp N3        &kp N4               &kp N5                  /**/ &kp N6                  &kp N7              &kp N8                  &kp N9          &mt RSHFT N0
                    &kp LC(Z)        &kp LC(X)    &kp LC(C)     &kp LC(V)            &kp LC(Y)               /**/ &kp BACKSPACE           &kp DELETE          &kp COMMA               &kp DOT         &mt RCTRL SLASH
-                 /*&                &*/          &trans        &trans               &trans                  /**/ &none                   &trans              &trans                                /*&               &*/
+                 /*&                &*/          &trans        &trans               &trans                  /**/ &none                   &trans              &trans                /*&               &*/
                >;
         };
 
