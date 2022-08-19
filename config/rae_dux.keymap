@@ -39,6 +39,15 @@
         acceleration-exponent=<0>;
 }; 
 
+#define MMV_UP MOVE_VERT(-1600)
+#define MMV_DN MOVE_VERT(1600)
+#define MMV_LT MOVE_HOR(-1600)
+#define MMV_RT MOVE_HOR(1600)
+#define MSC_UP SCROLL_VERT(20)
+#define MSC_DN SCROLL_VERT(-20)
+#define MSC_LT SCROLL_HOR(-20)
+#define MSC_RT SCROLL_HOR(20)
+
 #define MAIN_L   0
 #define QWERTY_L 1
 #define SYM_L    2
@@ -101,8 +110,8 @@
         COMBO(function_layer_tg, &tog FN_L, 15 16 25 26, 50)
         COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
         COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
-        COMBO(board_layer_l, &sl BOARD_L, 0 10 20, 100)
-        COMBO(board_layer_r, &sl BOARD_L, 9 19 29, 100)
+        COMBO(board_layer_l, &sl BOARD_L, 20 21 22 23, 100)
+        COMBO(board_layer_r, &sl BOARD_L, 26 27 28 29, 100)
     };
 
     behaviors {
@@ -185,9 +194,9 @@
 
         nav_layer {
             bindings = <
-                   &trans           &mwh SCROLL_VERT(20)  &mmv MOVE_VERT(-1600) &mkp MCLK &kp LALT          /**/ &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
-                   &kp LSHFT        &mmv MOVE_HOR(-1600)  &mmv MOVE_VERT(1600) &mmv MOVE_HOR(1600) &trans   /**/ &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &mt RSHFT END
-                   &kp LCTRL        &mwh SCROLL_VERT(-20) &mwh SCROLL_HOR(-20) &mwh SCROLL_HOR(20) &kp LGUI /**/ &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp RCTRL
+                   &trans           &mwh MSC_UP  &mmv MMV_UP   &mkp MCLK            &kp LALT                /**/ &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
+                   &kp LSHFT        &mmv MMV_LT  &mmv MMV_DN   &mmv MMV_RT          &trans                  /**/ &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &mt RSHFT END
+                   &kp LCTRL        &mwh MSC_DN  &mwh MSC_LT   &mwh MSC_RT          &kp LGUI                /**/ &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp RCTRL
                  /*&                &*/          &mkp RCLK     &mkp LCLK            &trans                  /**/ &none                   &trans              &kp LALT              /*&               &*/
             >; 
         };
@@ -223,7 +232,7 @@
             bindings = <
                    &none            &none        &none         &none                &none                   /**/ &none                   &none               &out OUT_USB            &out OUT_BLE    &out OUT_TOG
                    &bt BT_SEL 0     &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3         &bt BT_SEL 4            /**/ &none                   &none               &none                   &trans          &trans
-                   &none            &none        &bt BT_CLR    &bootloader          &none                   /**/ &none                   &bootloader         &none                   &trans          &trans
+                   &none            &none        &bt BT_CLR    &none                &bootloader             /**/ &bootloader             &none               &none                   &trans          &trans
                  /*&                &*/          &kp LA(LEFT)  &kp LA(RIGHT)        &trans                  /**/ &none                   &trans              &trans                /*&               &*/
             >;
         };
