@@ -104,14 +104,13 @@
         COMBO(rparenthesis, &kp RPAR, 26 27, 30)
         COMBO(swlang, &kp SW_LANG, 12 13 16 17, 50)
 
-        COMBO(main_mirror, &sl MIRROR_L, 13 14, 50)
-        COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
-        COMBO(numpad_layer_tg, &tog NUMPAD_L, 13 14 23 24, 50)
-        COMBO(function_layer_tg, &tog FN_L, 15 16 25 26, 50)
-        COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
-        COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
         COMBO(board_layer_l, &sl BOARD_L, 20 21 22 23, 100)
         COMBO(board_layer_r, &sl BOARD_L, 26 27 28 29, 100)
+        COMBO(function_layer_tg, &tog FN_L, 15 16 25 26, 50)
+        COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
+        COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
+        COMBO(numpad_layer_tg, &tog NUMPAD_L, 13 14 23 24, 50)
+        COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
     };
 
     behaviors {
