@@ -120,7 +120,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <100>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R EXTRA_L THUMBS>;
@@ -131,7 +131,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <100>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L EXTRA_R THUMBS>;
