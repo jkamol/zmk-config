@@ -106,6 +106,7 @@
 
         COMBO(board_layer_l, &sl BOARD_L, 20 21 22 23, 100)
         COMBO(board_layer_r, &sl BOARD_L, 26 27 28 29, 100)
+        COMBO(function_layer_mo, &mo FN_L, 30 31, 30)
         COMBO(function_layer_tg, &tog FN_L, 15 16 25 26, 50)
         COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
         COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
@@ -187,7 +188,7 @@
                    &mt LA(F4) N6    &kp N7       &mt TASK_MNG N8 &kp N9             &mt LC(LA(DEL)) N0      /**/ &kp CARET               &kp AMPS            &kp AT                  &kp HASH        &kp DLLR
                    &mt LSHFT N1     &mt LALT N2  &kp N3        &kp N4               &kp N5                  /**/ &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &mt RSHFT SEMICOLON
                    &mt LCTRL LC(Z)  &kp BSPC     &mt LG(LS(S)) PSCRN &kp DELETE     &mt LGUI LC(Y)          /**/ &kp PRCNT               &kp LBKT            &kp RBKT                &kp EXCL        &kp BSLH
-                 /*&                &*/          &mo FN_L      &trans               &mo MIRROR_L            /**/ &none                   &trans              &trans                /*&               &*/
+                 /*&                &*/          &mo MIRROR_L  &trans               &trans                  /**/ &none                   &trans              &trans                /*&               &*/
                >;
         };
 
