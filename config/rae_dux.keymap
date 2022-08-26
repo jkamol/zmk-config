@@ -111,6 +111,7 @@
         COMBO(mirror_layer_mo, &mo MIRROR_L, 30 31, 30)
         COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
         COMBO(numpad_layer_tg, &tog NUMPAD_L, 13 14 23 24, 50)
+        COMBO(numrow_layer_mo, &mo NUMROW_L, 31 34, 50)
         COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
     };
 
@@ -194,8 +195,8 @@
 
         nav_layer {
             bindings = <
-                   &trans           &mwh MWH_UP  &mmv MMV_UP   &mkp MCLK            &kp LALT                /**/ &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
-                   &kp LSHFT        &mmv MMV_LT  &mmv MMV_DN   &mmv MMV_RT          &trans                  /**/ &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &mt RSHFT END
+                   &none            &mwh MWH_UP  &mmv MMV_UP   &mkp MCLK            &kp LALT                /**/ &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
+                   &kp LSHFT        &mmv MMV_LT  &mmv MMV_DN   &mmv MMV_RT          &none                   /**/ &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &mt RSHFT END
                    &kp LCTRL        &mwh MWH_DN  &mwh MWH_LT   &mwh MWH_RT          &kp LGUI                /**/ &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp RCTRL
                  /*&                &*/          &mkp RCLK     &mkp LCLK            &trans                  /**/ &none                   &trans              &kp LALT              /*&               &*/
             >; 
@@ -239,10 +240,10 @@
 
         main_mirror {
             bindings = <
-                   &kp SEMICOLON    &kp Y        &kp U         &kp L                &kp J                   /**/ &kp B                   &kp P               &kp F                   &kp W           &kp Q
+                   &kp APOS         &kp Y        &kp U         &kp L                &kp J                   /**/ &kp B                   &kp P               &kp F                   &kp W           &kp Q
                    &kp O            &kp I        &kp E         &kp N                &kp M                   /**/ &kp G                   &kp T               &kp S                   &kp R           &kp A
                    &kp SLASH        &kp DOT      &kp COMMA     &kp H                &kp K                   /**/ &kp V                   &kp D               &kp C                   &kp X           &kp Z
-                 /*&                &*/          &kp ENTER     &kp BSPC             &trans                  /**/ &none                   &kp SPACE           &kp TAB               /*&               &*/
+                 /*&                &*/          &none         &none                &none                   /**/ &none                   &kp SPACE           &kp TAB               /*&               &*/
             >;  
         };
 
