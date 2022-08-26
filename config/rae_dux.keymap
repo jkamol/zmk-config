@@ -68,14 +68,6 @@
 #define EXTRA_R 5 6 7 15 16 17 25 26 27                 // extra right-hand keys
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <SYM_L NAV_L>;
-            then-layer = <NUMROW_L>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -100,8 +92,6 @@
         COMBO(alt-tab, &kp LA(TAB), 1 2, 30)
         COMBO(enter, &kp ENTER, 11 12, 30)
         COMBO(escape, &kp ESCAPE, 10 11, 30)
-        COMBO(lparenthesis, &kp LPAR, 25 26, 30)
-        COMBO(rparenthesis, &kp RPAR, 26 27, 30)
         COMBO(swlang, &kp SW_LANG, 12 13 16 17, 50)
 
         COMBO(board_layer_l, &sl BOARD_L, 20 21 22 23, 100)
