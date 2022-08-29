@@ -161,7 +161,7 @@
                    &mt LC(LSHFT) Q  &kp W        &kp F         &kp P                &mtl RALT B             /**/ &mtr RALT J             &kp L               &kp U                   &kp Y           &mt RC(RSHFT) APOS
                    &hml LSHFT A     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp M                   &kp N               &kp E                   &kp I           &hmr RSHFT O
                    &mt LCTRL Z      &kp X        &kp C         &kp D                &mt LGUI V              /**/ &mt RGUI K              &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
-                 /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &kp LSHFT               /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER        /*&               &*/
+                 /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &key_repeat             /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER        /*&               &*/
             >;  
         };
 
