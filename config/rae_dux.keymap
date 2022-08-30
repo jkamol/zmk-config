@@ -158,18 +158,18 @@
         // MAIN
         main_layer {
             bindings = <
-                   &mt LC(LSHFT) Q  &kp W        &kp F         &kp P                &mtl RALT B             /**/ &mtr RALT J             &kp L               &kp U                   &kp Y           &mt RC(RSHFT) APOS
+                   &mtl LC(LSHFT) Q &kp W        &kp F         &kp P                &mtl RALT B             /**/ &mtr RALT J             &kp L               &kp U                   &kp Y           &mtr RC(RSHFT) APOS
                    &hml LSHFT A     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp M                   &kp N               &kp E                   &kp I           &hmr RSHFT O
-                   &mt LCTRL Z      &kp X        &kp C         &kp D                &mt LGUI V              /**/ &mt RGUI K              &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
+                   &mt LCTRL Z      &kp X        &kp C         &kp D                &mtl LGUI V             /**/ &mtr RGUI K             &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
                  /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &key_repeat             /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER        /*&               &*/
             >;  
         };
 
         qwerty_layer {
             bindings = < 
-                   &trans           &trans       &kp E         &kp R                &mtl RALT T             /**/ &mtr RALT Y             &kp U               &kp I                   &kp O           &mt RC(RSHFT) P
+                   &trans           &trans       &kp E         &kp R                &mtl RALT T             /**/ &mtr RALT Y             &kp U               &kp I                   &kp O           &mtr RC(RSHFT) P
                    &trans           &hml LALT S  &kp D         &kp F                &kp G                   /**/ &kp H                   &kp J               &kp K                   &kp L           &hmr RSHFT SEMICOLON
-                   &trans           &trans       &trans        &kp V                &mt LGUI B              /**/ &mt RGUI N              &kp M               &trans                  &trans          &trans
+                   &trans           &trans       &trans        &kp V                &mtl LGUI B             /**/ &mtr RGUI N             &kp M               &trans                  &trans          &trans
                  /*&                &*/          &trans        &trans               &trans                  /**/ &none                   &trans              &trans                /*&               &*/
             >;      
         };
