@@ -89,10 +89,9 @@
                   ╰────────────╯ ╰────────────╯        */
 
 
-        COMBO(alt-tab, &kp LA(TAB), 1 2, 30)
         COMBO(enter, &kp ENTER, 11 12, 30)
-        COMBO(escape, &kp ESCAPE, 10 11, 30)
-        COMBO(swlang, &kp SW_LANG, 12 13 16 17, 50)
+        COMBO(escape, &kp ESCAPE, 1 2, 30)
+        COMBO(swlang, &kp SW_LANG, 10 11, 30)
 
         COMBO(board_layer_l, &sl BOARD_L, 20 21 22 23, 100)
         COMBO(board_layer_r, &sl BOARD_L, 26 27 28 29, 100)
