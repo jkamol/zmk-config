@@ -204,7 +204,7 @@
             bindings = <
                    &kp N1           &kp N2       &kp N3        &kp N4               &kp PAUSE_BREAK         /**/ &kp SLCK                &none               &none                   &kp C_VOL_UP    &none
                    &kp F1           &kp F2       &kp F3        &kp F4               &kp F5                  /**/ &kp F11                 &kp C_PREV          &kp C_PP                &kp C_MUTE      &kp C_NEXT
-                   &kp F6           &kp F7       &kp F8        &kp F9               &kp F10                 /**/ &kp F12                 &none               &none                   &kp C_VOL_DN    &none
+                   &kp F6           &kp F7       &kp F8        &kp F9               &kp F10                 /**/ &kp F12                 &none               &none                   &kp C_VOL_DN    &kp RCTRL
                  /*&                &*/          &trans        &kp LALT             &mo NUMPAD_L            /**/ &none                   &trans              &trans                /*&               &*/
             >;
         };
