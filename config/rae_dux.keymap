@@ -161,7 +161,7 @@
                 &kp A           &kp R           &kp S           &kp T           &kp G               &kp M           &kp N           &kp E           &kp I           &kp O
                 &kp Z           &kp X           &kp C           &kp D           &kp V               &kp K           &kp H           &kp COMMA       &kp DOT         &kp SLASH
             //╰─────────────────────────────────────────────────────────────────────────────────┤ ├─────────────────────────────────────────────────────────────────────────────────╯
-                                                &lt MM_L TAB    &lt SYM_L SPACE &kp LSHFT           &none           &lt NAV_L BSPC  &lt FN_L ENTER
+                                                &lt MM_L TAB    &lt SYM_L SPACE &kp LSHFT           &none           &lt NAV_L BSPC  &kp RSHFT
             //                              ╰───────────────────────────────────────────────────╯ ╰───────────────────────────────────────────────────╯
             >;
         };
