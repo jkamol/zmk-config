@@ -161,7 +161,7 @@
                 &kp A           &kp R           &kp S           &kp T           &kp G               &kp M           &kp N           &kp E           &kp I           &kp O
                 &kp Z           &kp X           &kp C           &kp D           &kp V               &kp K           &kp H           &kp COMMA       &kp DOT         &kp SLASH
             //╰─────────────────────────────────────────────────────────────────────────────────┤ ├─────────────────────────────────────────────────────────────────────────────────╯
-                                                &lt MM_L TAB    &lt SYM_L SPACE &kp LSHFT           &none           &lt NAV_L BSPC  &kp RSHFT
+                                                &lt MM_L TAB    &lt SYM_L SPACE &key_repeat         &none           &lt NAV_L BSPC  &kp RSHFT
             //                              ╰───────────────────────────────────────────────────╯ ╰───────────────────────────────────────────────────╯
             >;
         };
@@ -193,9 +193,9 @@
         nav_layer {
             bindings = <
             //╭─────────────────────────────────────────────────────────────────────────────────╮ ╭─────────────────────────────────────────────────────────────────────────────────╮
-                &none           &none           &none           &none           &none               &kp PAGE_UP     &kp HOME        &kp UP          &kp END         &none
+                &none           &none           &none           &none           &none               &kp PAGE_UP     &kp HOME        &kp UP          &kp END         &kp ENTER
                 &kp LSHFT       &kp LALT        &kp LCTRL       &kp LGUI        &none               &kp PAGE_DOWN   &kp LEFT        &kp DOWN        &kp RIGHT       &mt RSHFT SWLANG
-                &none           &none           &none           &none           &none               &kp K_CMENU     &kp DELETE      &kp ENTER       &kp BSPC        &kp LALT
+                &none           &none           &none           &none           &none               &kp K_CMENU     &kp DELETE      &none           &kp BSPC        &kp LALT
             //╰─────────────────────────────────────────────────────────────────────────────────┤ ├─────────────────────────────────────────────────────────────────────────────────╯
                                                 &trans          &trans          &trans              &trans          &trans          &mo FN_L
             //                              ╰───────────────────────────────────────────────────╯ ╰───────────────────────────────────────────────────╯
