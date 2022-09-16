@@ -130,8 +130,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_TAP_LEFT";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -141,8 +141,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_TAP_RIGHT";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -182,7 +182,7 @@
             bindings = <
             //╭─────────────────────────────────────────────────────────────────────────────────╮ ╭─────────────────────────────────────────────────────────────────────────────────╮
                 &kp GRAVE       &kp N9          &kp N8          &kp N7          &kp N6              &kp CARET       &kp AMPS        &kp AT          &kp HASH        &kp DLLR
-                &mtl LSHFT N4   &mtl LALT N3    &mtl LCTRL N2   &mtl LGUI N1    &kp N5              &kp TILDE       &kp MINUS       &kp STAR        &kp EQUAL       &mt RSHFT SEMI
+                &mt LSHFT N4    &mtl LALT N3    &mtl LCTRL N2   &mtl LGUI N1    &kp N5              &kp TILDE       &kp MINUS       &kp STAR        &kp EQUAL       &mt RSHFT SEMI
                 &kp LPAR        &kp BSPC        &kp N0          &kp DEL         &kp RPAR            &kp PRCNT       &kp LBKT        &kp RBKT        &kp EXCL        &kp BSLH
             //╰─────────────────────────────────────────────────────────────────────────────────┤ ├─────────────────────────────────────────────────────────────────────────────────╯
                                                 &mo FN_L        &trans          &trans              &trans          &trans          &trans
