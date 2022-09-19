@@ -222,7 +222,7 @@
             bindings = <
                    &none            &none        &none         &none                &none                   /**/ &none                   &none               &out OUT_USB            &out OUT_BLE    &out OUT_TOG
                    &bt BT_SEL 0     &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3         &bt BT_SEL 4            /**/ &none                   &none               &none                   &trans          &trans
-                   &none            &none        &bt BT_CLR    &none                &bootloader             /**/ &bootloader             &none               &none                   &trans          &trans
+                   &none            &none        &bt BT_CLR    &bootloader          &none                   /**/ &none                   &bootloader         &none                   &trans          &trans
                  /*&                &*/          &kp LA(LEFT)  &kp LA(RIGHT)        &trans                  /**/ &none                   &trans              &trans                /*&               &*/
             >;
         };
