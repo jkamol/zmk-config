@@ -68,6 +68,14 @@
 #define EXTRA_R 5 6 7 15 16 17 25 26 27                 // extra right-hand keys
 
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <SYM_L NAV_L>;
+            then-layer = <NUMROW_L>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
