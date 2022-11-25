@@ -39,10 +39,10 @@
         acceleration-exponent=<0>;
 }; 
 
-#define MMV_UP MOVE_VERT(-1400)
-#define MMV_DN MOVE_VERT(1400)
-#define MMV_LT MOVE_HOR(-1400)
-#define MMV_RT MOVE_HOR(1400)
+#define MMV_UP MOVE_VERT(-1600)
+#define MMV_DN MOVE_VERT(1600)
+#define MMV_LT MOVE_HOR(-1600)
+#define MMV_RT MOVE_HOR(1600)
 #define MWH_UP SCROLL_VERT(20)
 #define MWH_DN SCROLL_VERT(-20)
 #define MWH_LT SCROLL_HOR(-20)
