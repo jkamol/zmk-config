@@ -126,7 +126,7 @@
         &mtl LC(LSHFT) TAB &kp Q    &kp W         &kp F           &kp P             &mtl RALT B             &mtr RALT J             &kp L       &kp U           &kp Y         &kp APOS        &kp RC(RSHFT)
         &kp LSHFT &kp A             &kp R         &kp S           &kp T             &kp G                   &kp M                   &kp N       &kp E           &kp I         &kp O           &kp RSHFT
         &kp LCTRL &kp Z             &kp X         &kp C           &kp D             &mtl LGUI V             &mtr RGUI K             &kp H       &kp COMMA       &kp DOT       &kp SLASH       &kp RCTRL
-    /*╰─────────────────────────────────────╮*/   &mt LCTRL TAB   &kp LALT          &lt SYM_L SPACE         &lt NAV_L BSPC          &kp LSHFT   &lt FN_L ENTER     /*╭─────────────────────────────────────╯*/
+    /*╰─────────────────────────────────────╮*/   &kp LALT        &mt LCTRL TAB     &lt SYM_L SPACE         &lt NAV_L BSPC          &kp LSHFT   &lt FN_L ENTER     /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;  
     };
