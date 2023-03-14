@@ -165,10 +165,10 @@
         // MAIN
         main_layer {
             bindings = <
-                   &mtl LC(LSHFT) Q &kp W        &kp F         &kp P                &mtl RALT B             /**/ &mtr RALT J             &kp L               &kp U                   &kp Y           &mtr RC(RSHFT) APOS
-                   &hml LSHFT A     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp M                   &kp N               &kp E                   &kp I           &hmr RSHFT O
-                   &mt LCTRL Z      &kp X        &kp C         &kp D                &mtl LGUI V             /**/ &mtr RGUI K             &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
-                 /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &kp BSPC                /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER        /*&               &*/
+                   &mtl LC(LSHFT) Q &kp W        &kp F         &kp P                &mtl RALT B             /**/ &none                  &mkp MCLK            &mmv MMV_UP   &mwh MWH_UP          &none
+                   &hml LSHFT A     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp LSHFT              &mmv MMV_LT          &mmv MMV_DN   &mmv MMV_RT          &none   
+                   &mt LCTRL Z      &kp X        &kp C         &kp D                &mtl LGUI V             /**/ &kp LGUI               &mwh MWH_LT          &mwh MWH_RT   &mwh MWH_DN          &kp LCTRL
+                 /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &kp BSPC                /**/ &none                  &lt NAV_L BSPC       &lt BOARD_L ENTER        /*&               &*/
             >;  
         };
 
@@ -229,8 +229,8 @@
         board_layer {
             bindings = <
                    &none            &none        &none         &none                &none                   /**/ &none                   &none               &out OUT_USB            &out OUT_BLE    &out OUT_TOG
-                   &bt BT_SEL 0     &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3         &bt BT_SEL 4            /**/ &none                   &none               &none                   &trans          &trans
-                   &none            &none        &bt BT_CLR    &bootloader          &none                   /**/ &none                   &bootloader         &none                   &trans          &trans
+                   &bt BT_SEL 0     &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3         &bt BT_SEL 4            /**/ &bt BT_SEL 0            &bt BT_SEL 1        &bt BT_SEL 2            &bt BT_SEL 3    &bt BT_SEL 4
+                   &none            &none        &bt BT_CLR    &bootloader          &none                   /**/ &none                   &bootloader         &bt BT_CLR              &trans          &trans
                  /*&                &*/          &kp LA(LEFT)  &kp LA(RIGHT)        &trans                  /**/ &none                   &trans              &trans                /*&               &*/
             >;
         };
