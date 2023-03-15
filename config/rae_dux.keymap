@@ -165,10 +165,10 @@
         // MAIN
         main_layer {
             bindings = <
-                   &mtl LC(LSHFT) Q &kp W        &kp F         &kp P                &mtl RALT B             /**/ &kp INSERT              &kp K_CMENU          &kp UP                 &kp PAGE_UP     &kp CAPS
+                   &mtl LC(LSHFT) Q &kp W        &kp F         &kp P                &mtl RALT B             /**/ &kp INSERT              &kp K_CMENU          &kp UP                 &kp PAGE_UP     &kp LGUI
                    &hml LSHFT A     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp HOME                &kp LEFT             &kp DOWN               &kp RIGHT       &mt RSHFT END
-                   &mt LCTRL Z      &kp X        &kp C         &kp D                &mtl LGUI V             /**/ &kp BACKSPACE           &kp DELETE           &none                  &kp PAGE_DOWN   &kp RCTRL
-                 /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &kp BSPC                /**/ &none                   &lt NAV_L TAB        &lt BOARD_L ENTER    /*&               &*/
+                   &mt LCTRL Z      &kp X        &kp C         &kp D                &mtl LGUI V             /**/ &kp BACKSPACE           &kp DELETE           &kp ENTER              &kp PAGE_DOWN   &kp RCTRL
+                 /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &kp BSPC                /**/ &none                   &lt NAV_L TAB        &lt FN_L LS(TAB)     /*&               &*/
             >;  
         };
 
@@ -192,7 +192,7 @@
 
         nav_layer {
             bindings = <
-                   &none            &mwh MWH_UP  &mmv MMV_UP   &mkp MCLK            &kp LALT                /**/ &none                   &mkp MCLK           &mmv MMV_UP             &mwh MWH_UP     &none
+                   &none            &mwh MWH_UP  &mmv MMV_UP   &mkp MCLK            &kp LALT                /**/ &none                   &mkp MCLK           &mmv MMV_UP             &mwh MWH_UP     &kp CAPS
                    &kp LSHFT        &mmv MMV_LT  &mmv MMV_DN   &mmv MMV_RT          &none                   /**/ &mkp LCLK               &mmv MMV_LT         &mmv MMV_DN             &mmv MMV_RT     &mkp RCLK
                    &kp LCTRL        &mwh MWH_DN  &mwh MWH_LT   &mwh MWH_RT          &kp LGUI                /**/ &kp LGUI                &mwh MWH_LT         &mwh MWH_RT             &mwh MWH_DN     &kp LCTRL
                  /*&                &*/          &mkp RCLK     &mkp LCLK            &trans                  /**/ &none                   &trans              &kp LALT              /*&               &*/
