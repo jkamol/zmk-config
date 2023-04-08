@@ -162,12 +162,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // MAIN
+        // MAIN 
         main_layer {
             bindings = <
-                   &mtl LC(LSHFT) Q &kp W        &kp F         &kp P                &mtl RALT B             /**/ &mtr RALT J             &kp L               &kp U                   &kp Y           &mtr RC(RSHFT) APOS
-                   &hml LSHFT A     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp M                   &kp N               &kp E                   &kp I           &hmr RSHFT O
-                   &mt LCTRL Z      &kp X        &kp C         &kp D                &mtl LGUI V             /**/ &mtr RGUI K             &kp H               &kp COMMA               &kp DOT         &mt RCTRL SLASH
+                   &mtl LC(LSHFT) W &kp L        &kp Y         &kp P                &mtl RALT B             /**/ &mtr RALT Z             &kp F               &kp O                   &kp U           &mtr LC(LSHFT) APOS
+                   &hml LSHFT C     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp M                   &kp N               &kp E                   &kp I           &hmr LSHFT A
+                   &mt LCTRL Q      &kp J        &kp V         &kp D                &mtl LGUI K             /**/ &mtr RGUI X             &kp H               &kp SLASH               &kp COMMA       &mt LCTRL DOT
                  /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &kp BSPC                /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER        /*&               &*/
             >;  
         };
@@ -175,7 +175,7 @@
         qwerty_layer {
             bindings = < 
                    &kp Q            &kp W        &kp E         &kp R                &kp T                   /**/ &kp Y                   &kp U               &kp I                   &kp O           &kp P
-                   &kp A            &kp S        &kp D         &kp F                &kp G                   /**/ &kp H                   &kp J               &kp K                   &kp L           &kp SEMICOLON
+                   &hml LSHFT  A    &kp S        &kp D         &kp F                &kp G                   /**/ &kp H                   &kp J               &kp K                   &kp L           &hmr LSHFT SEMICOLON
                    &kp Z            &kp X        &kp C         &kp V                &kp B                   /**/ &kp N                   &kp M               &kp COMMA               &kp DOT         &kp SLASH
                  /*&                &*/          &trans        &trans               &trans                  /**/ &none                   &trans              &trans                /*&               &*/
             >;      
@@ -184,8 +184,8 @@
         sym_layer {
             bindings = <
                    &mt LA(F4) N6    &kp N7       &kp N8        &mt LG(LS(S)) N9     &mt LC(LA(DEL)) N0      /**/ &mtr RALT CARET         &kp AMPS            &kp AT                  &kp HASH        &kp DLLR
-                   &mt LSHFT N1     &mt LALT N2  &mt LC(V) N3  &mt PSCRN N4         &mt TASK_MNG N5         /**/ &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &mt RSHFT SEMICOLON
-                   &mt LCTRL LC(Z)  &kp BSPC     &mt LC(X) LC(C) &kp DELETE         &mt LGUI LC(Y)          /**/ &kp PRCNT               &kp LBKT            &kp RBKT                &kp EXCL        &kp BSLH
+                   &mt LSHFT N1     &mt LALT N2  &mt LC(V) N3  &mt PSCRN N4         &mt TASK_MNG N5         /**/ &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &mt LSHFT SEMICOLON
+                   &mt LCTRL LC(Z)  &kp BSPC     &mt LC(X) LC(C) &kp DELETE         &mt LGUI LC(Y)          /**/ &kp PRCNT               &kp LBKT            &kp BSLH                 &kp EXCL        &kp RBKT
                  /*&                &*/          &mo FN_L      &trans               &trans                  /**/ &none                   &trans              &trans                /*&               &*/
                >;
         };
@@ -193,8 +193,8 @@
         nav_layer {
             bindings = <
                    &none            &mwh MWH_UP  &mmv MMV_UP   &mkp MCLK            &kp LALT                /**/ &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
-                   &kp LSHFT        &mmv MMV_LT  &mmv MMV_DN   &mmv MMV_RT          &none                   /**/ &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &mt RSHFT END
-                   &kp LCTRL        &mwh MWH_DN  &mwh MWH_LT   &mwh MWH_RT          &kp LGUI                /**/ &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp RCTRL
+                   &kp LSHFT        &mmv MMV_LT  &mmv MMV_DN   &mmv MMV_RT          &none                   /**/ &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &mt LSHFT END
+                   &kp LCTRL        &mwh MWH_DN  &mwh MWH_LT   &mwh MWH_RT          &kp LGUI                /**/ &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp LCTRL
                  /*&                &*/          &mkp RCLK     &mkp LCLK            &trans                  /**/ &none                   &trans              &kp LALT              /*&               &*/
             >; 
         };
@@ -202,8 +202,8 @@
         numrow_layer {
             bindings = <
                    &kp EXCL         &kp AT       &kp HASH      &kp DLLR             &kp PRCNT               /**/ &kp CARET               &kp AMPS            &kp STAR                &kp LPAR        &kp RPAR
-                   &mt LSHFT N1     &kp N2       &kp N3        &kp N4               &kp N5                  /**/ &kp N6                  &kp N7              &kp N8                  &kp N9          &mt RSHFT N0
-                   &kp LC(Z)        &kp LC(X)    &kp LC(C)     &kp LC(V)            &kp LC(Y)               /**/ &kp BACKSPACE           &kp DELETE          &kp COMMA               &kp DOT         &mt RCTRL SLASH
+                   &mt LSHFT N1     &kp N2       &kp N3        &kp N4               &kp N5                  /**/ &kp N6                  &kp N7              &kp N8                  &kp N9          &mt LSHFT N0
+                   &kp LC(Z)        &kp LC(X)    &kp LC(C)     &kp LC(V)            &kp LC(Y)               /**/ &kp BACKSPACE           &kp DELETE          &kp SLASH               &kp COMMA       &mt LCTRL DOT
                  /*&                &*/          &trans        &trans               &trans                  /**/ &none                   &trans              &trans                /*&               &*/
                >;
         };
@@ -212,7 +212,7 @@
             bindings = <
                    &kp N1           &kp N2       &kp N3        &kp N4               &kp PAUSE_BREAK         /**/ &kp SLCK                &none               &none                   &kp C_VOL_UP    &none
                    &kp F1           &kp F2       &kp F3        &kp F4               &kp F5                  /**/ &kp F11                 &kp C_PREV          &kp C_PP                &kp C_MUTE      &kp C_NEXT
-                   &kp F6           &kp F7       &kp F8        &kp F9               &kp F10                 /**/ &kp F12                 &none               &none                   &kp C_VOL_DN    &kp RCTRL
+                   &kp F6           &kp F7       &kp F8        &kp F9               &kp F10                 /**/ &kp F12                 &none               &none                   &kp C_VOL_DN    &kp LCTRL
                  /*&                &*/          &trans        &kp LALT             &mo NUMPAD_L            /**/ &none                   &trans              &trans                /*&               &*/
             >;
         };
