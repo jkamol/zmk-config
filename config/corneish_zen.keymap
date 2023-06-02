@@ -123,28 +123,28 @@
       label = "MAIN";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &mtl LC(LSHFT) TAB &kp Q    &kp W         &kp F           &kp P             &mtl RALT B             &mtr RALT J             &kp L       &kp U           &kp Y         &kp APOS        &kp RC(RSHFT)
-        &kp LSHFT &kp A             &kp R         &kp S           &kp T             &kp G                   &kp M                   &kp N       &kp E           &kp I         &kp O           &kp RSHFT
-        &kp LCTRL &kp Z             &kp X         &kp C           &kp D             &mtl LGUI V             &mtr RGUI K             &kp H       &kp COMMA       &kp DOT       &kp SLASH       &kp RCTRL
+        &kp TAB   &mtl LC(LSHFT) Q  &kp W         &kp F           &kp P             &mtl RALT B             &mtr RALT J             &kp L       &kp U           &kp Y         &mtr LC(LSHFT) APOS &kp LC(RSHFT)
+        &kp LSHFT &mtl LSHFT A      &mtl LALT R   &kp S           &kp T             &kp G                   &kp M                   &kp N       &kp E           &kp I         &mtr LSHFT O    &kp LSHFT
+        &kp LCTRL &mt LCTRL Z       &kp X         &kp C           &kp D             &mtl LGUI V             &mtr RGUI K             &kp H       &kp COMMA       &kp DOT       &mt LCTRL SLASH &kp LCTRL
     /*╰─────────────────────────────────────╮*/   &kp LALT        &mt LCTRL TAB     &lt SYM_L SPACE         &lt NAV_L BSPC          &kp LSHFT   &lt FN_L ENTER     /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;  
     };
 
     qwerty_layer {
-      label = "QWERTY";
+      label = "QWERT";
       bindings = < 
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &trans      &kp Q           &kp W         &kp E           &kp R             &kp T                   &kp Y                   &kp U       &kp I           &kp O         &kp P           &trans
         &trans      &kp A           &kp S         &kp D           &kp F             &kp G                   &kp H                   &kp J       &kp K           &kp L         &kp SEMICOLON   &trans
-        &trans      &kp Z           &kp X         &kp C           &kp V             &kp B                   &kp N                   &kp M       &kp COMMA       &kp DOT       &kp SLASH       &trans
+        &trans      &kp Z           &kp X         &kp C           &kp V             &kp B                   &kp N                   &kp M       &kp COMMA       &kp DOT       &mt LCTRL SLASH &trans
     /*╰─────────────────────────────────────╮*/   &trans          &trans            &trans                  &trans                  &trans      &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;      
     };
 
     sym_layer {
-      label = "SYMBOL";
+      label = "SYM";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &trans      &mt LA(F4) N6   &kp N7        &kp N8          &mt LG(LS(S)) N9  &mt LC(LA(DEL)) N0      &mtr RALT CARET         &kp AMPS    &kp AT          &kp HASH      &kp DLLR        &trans
@@ -156,19 +156,19 @@
     };
 
     nav_layer {
-      label = "NAVIGATE";
+      label = "NAVI";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &trans      &none           &kp PAGE_UP   &kp UP          &none             &kp LALT                &kp INSERT              &kp K_CMENU &kp UP          &kp PAGE_UP   &kp CAPS        &trans
-        &trans      &none           &kp LEFT      &kp DOWN        &kp RIGHT         &none                   &kp HOME                &kp LEFT    &kp DOWN        &kp RIGHT     &mt RSHFT END   &trans
-        &trans      &none           &kp PAGE_DOWN &none           &none             &kp LGUI                &kp BACKSPACE           &kp DELETE  &kp SW_LANG     &kp PAGE_DOWN &kp RCTRL       &trans
+        &trans      &none           &kp LEFT      &kp DOWN        &kp RIGHT         &none                   &kp HOME                &kp LEFT    &kp DOWN        &kp RIGHT     &mt LSHFT END   &trans
+        &trans      &none           &kp PAGE_DOWN &none           &none             &kp LGUI                &kp BACKSPACE           &kp DELETE  &kp SW_LANG     &kp PAGE_DOWN &kp LCTRL       &trans
     /*╰─────────────────────────────────────╮*/   &trans          &trans            &trans                  &trans                  &kp LALT    &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >; 
     };
 
     numrow_layer {
-      label = "NUM ROW";
+      label = "NUMR";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &trans      &kp EXCL        &kp AT        &kp HASH        &kp DLLR          &kp PRCNT               &kp CARET               &kp AMPS    &kp STAR        &kp LPAR      &kp RPAR        &trans
@@ -180,7 +180,7 @@
     };
 
     function_layer {
-      label = "FUNCTION";
+      label = "FUNC";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &trans      &kp N1          &kp N2        &kp N3          &kp N4            &kp PAUSE_BREAK         &kp SLCK                &none       &none           &kp C_VOL_UP  &none           &trans
@@ -192,7 +192,7 @@
     };
 
     numpad_layer {
-      label = "NUM PAD";
+      label = "NUMP";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &trans      &kp Q           &kp M         &kp F           &kp P             &kp T                   &mt KP_NUM KP_MULTIPLY  &kp KP_N7   &kp KP_N8       &kp KP_N9     &kp KP_SUBTRACT &trans
@@ -216,7 +216,7 @@
     };
 
     main_mirror {
-      label = "MIRROR";
+      label = "MIRR";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &trans      &kp APOS        &kp Y         &kp U           &kp L             &kp J                   &kp B                   &kp P       &kp F           &kp W         &kp Q           &trans
