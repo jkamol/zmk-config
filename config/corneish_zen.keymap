@@ -123,10 +123,10 @@
       label = "MAIN";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &kp TAB   &mtl LC(LSHFT) Q  &kp W         &kp F           &kp P             &mtl RALT B             &mtr RALT J             &kp L       &kp U           &kp Y         &mtr LC(LSHFT) APOS &kp LC(RSHFT)
-        &kp LSHFT &mtl LSHFT A      &mtl LALT R   &kp S           &kp T             &kp G                   &kp M                   &kp N       &kp E           &kp I         &mtr LSHFT O    &kp LSHFT
-        &kp LCTRL &mt LCTRL Z       &kp X         &kp C           &kp D             &mtl LGUI V             &mtr RGUI K             &kp H       &kp COMMA       &kp DOT       &mt LCTRL SLASH &kp LCTRL
-    /*╰─────────────────────────────────────╮*/   &kp LALT        &mt LCTRL TAB     &lt SYM_L SPACE         &lt NAV_L BSPC          &kp LSHFT   &lt FN_L ENTER     /*╭─────────────────────────────────────╯*/
+        &kp TAB   &mtl LC(LSHFT) Q  &kp L         &kp D           &kp P             &mtl RALT B             &mtr RALT APOS          &kp F       &kp O           &kp U         &mtr LC(LSHFT) J &kp LC(RSHFT)
+        &kp LSHFT &mtl LSHFT C      &mtl LALT R   &kp S           &kp T             &kp G                   &kp M                   &kp N       &kp A           &kp I         &mtr LSHFT Y     &kp LSHFT
+        &kp LCTRL &mt LCTRL Z       &kp X         &kp V           &kp W             &mtl LGUI K             &mtr RGUI SEMICOLON     &kp H       &kp SLASH       &kp COMMA     &mt LCTRL DOT    &kp LCTRL
+    /*╰─────────────────────────────────────╮*/   &mt LALT BSPC   &lt SYM_L SPACE   &mt LCTRL TAB           &lt FN_L ENTER          &lt NAV_L E &kp LSHFT          /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;  
     };
@@ -149,7 +149,7 @@
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &trans      &mt LA(F4) N6   &kp N7        &kp N8          &mt LG(LS(S)) N9  &mt LC(LA(DEL)) N0      &mtr RALT CARET         &kp AMPS    &kp AT          &kp HASH      &kp DLLR        &trans
         &trans      &kp N1          &mt LALT N2   &mt LC(V) N3    &mt PSCRN N4      &mt TASK_MNG N5         &kp GRAVE               &kp MINUS   &kp STAR        &kp EQUAL     &kp SEMICOLON   &trans
-        &trans      &kp LC(Z)       &kp BSPC      &mt LC(X) LC(C) &kp DELETE        &mt LGUI LC(Y)          &kp PRCNT               &kp LBKT    &kp RBKT        &kp EXCL      &kp BSLH        &trans
+        &trans      &kp LC(Z)       &kp BSPC      &mt LC(X) LC(C) &kp DELETE        &mt LGUI LC(Y)          &kp PRCNT               &kp LBKT    &kp BSLH        &kp EXCL      &kp RBKT        &trans
     /*╰─────────────────────────────────────╮*/   &trans          &trans            &trans                  &trans                  &trans      &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;
@@ -173,7 +173,7 @@
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &trans      &kp EXCL        &kp AT        &kp HASH        &kp DLLR          &kp PRCNT               &kp CARET               &kp AMPS    &kp STAR        &kp LPAR      &kp RPAR        &trans
         &trans      &mt LSHFT N1    &kp N2        &kp N3          &kp N4            &kp N5                  &kp N6                  &kp N7      &kp N8          &kp N9        &kp N0          &trans
-        &trans      &kp LC(Z)       &kp LC(X)     &kp LC(C)       &kp LC(V)         &kp LC(Y)               &kp BACKSPACE           &kp DELETE  &kp COMMA       &kp DOT       &kp SLASH       &trans
+        &trans      &kp LC(Z)       &kp LC(X)     &kp LC(C)       &kp LC(V)         &kp LC(Y)               &kp BACKSPACE           &kp DELETE  &kp SLASH       &kp COMMA     &kp DOT         &trans
     /*╰─────────────────────────────────────╮*/   &trans          &trans            &trans                  &trans                  &trans      &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;
