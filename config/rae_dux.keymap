@@ -97,8 +97,8 @@
                   ╰────────────╯ ╰────────────╯        */
 
 
-        COMBO(enter, &kp ENTER, 11 12, 30)
-        COMBO(escape, &kp ESCAPE, 1 2, 30)
+        COMBO(enter, &kp ENTER, 11 12 13, 30)
+        COMBO(escape, &kp ESCAPE, 1 2 3, 30)
         COMBO(swlang, &kp SW_LANG, 10 11, 30)
 
         COMBO(board_layer_l, &sl BOARD_L, 20 21 22 23, 100)
@@ -108,7 +108,7 @@
         COMBO(mirror_layer_mo, &mo MIRROR_L, 30 31, 30)
         COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
         COMBO(numpad_layer_tg, &tog NUMPAD_L, 13 14 23 24, 50)
-        COMBO(numrow_layer_mo, &mo NUMROW_L, 31 34, 50)
+        COMBO(numrow_layer_mo, &mo NUMROW_L, 30 35, 50)
         COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
     };
 
@@ -165,10 +165,10 @@
         // MAIN 
         main_layer {
             bindings = <
-                   &mtl LC(LSHFT) W &kp L        &kp Y         &kp P                &mtl RALT B             /**/ &mtr RALT Z             &kp F               &kp O                   &kp U           &mtr LC(LSHFT) APOS
-                   &hml LSHFT C     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp M                   &kp N               &kp E                   &kp I           &hmr LSHFT A
-                   &mt LCTRL Q      &kp J        &kp V         &kp D                &mtl LGUI K             /**/ &mtr RGUI X             &kp H               &kp SLASH               &kp COMMA       &mt LCTRL DOT
-                 /*&                &*/          &mt LCTRL TAB &lt SYM_L SPACE      &kp BSPC                /**/ &none                   &lt NAV_L BSPC      &lt FN_L ENTER        /*&               &*/
+                   &mtl LC(LSHFT) Q &kp L        &kp D         &kp P                &mtl RALT B             /**/ &mtr RALT APOS          &kp F               &kp O                   &kp U           &mtr LC(LSHFT) J
+                   &hml LSHFT C     &hml LALT R  &kp S         &kp T                &kp G                   /**/ &kp M                   &kp N               &kp A                   &kp I           &hmr LSHFT Y
+                   &mt LCTRL Z      &kp X        &kp V         &kp W                &mtl LGUI K             /**/ &mtr RGUI SEMICOLON     &kp H               &kp SLASH               &kp COMMA       &mt LCTRL DOT
+                 /*&                &*/          &lt SYM_L SPACE &mt LCTRL TAB      &kp BSPC                /**/ &none                   &lt FN_L ENTER      &lt NAV_L E           /*&               &*/
             >;  
         };
 
@@ -183,9 +183,9 @@
 
         sym_layer {
             bindings = <
-                   &mt LA(F4) N6    &kp N7       &kp N8        &mt LG(LS(S)) N9     &mt LC(LA(DEL)) N0      /**/ &mtr RALT CARET         &kp AMPS            &kp AT                  &kp HASH        &kp DLLR
-                   &mt LSHFT N1     &mt LALT N2  &mt LC(V) N3  &mt PSCRN N4         &mt TASK_MNG N5         /**/ &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &mt LSHFT SEMICOLON
-                   &mt LCTRL LC(Z)  &kp BSPC     &mt LC(X) LC(C) &kp DELETE         &mt LGUI LC(Y)          /**/ &kp PRCNT               &kp LBKT            &kp BSLH                 &kp EXCL        &kp RBKT
+                   &mt LA(F4) N6    &kp N7       &mt TASK_MNG N8 &kp N9             &kp N0                  /**/ &mtr RALT CARET         &kp AMPS            &kp AT                  &kp HASH        &kp DLLR
+                   &mt LSHFT N1     &mt LALT N2  &kp N3        &kp N4               &kp N5                  /**/ &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &mt LSHFT SEMICOLON
+                   &mt LCTRL LC(Z)  &kp BSPC     &mt LG(LS(S)) PSCRN &kp DELETE     &mt LGUI LC(Y)          /**/ &kp PRCNT               &kp LBKT            &kp BSLH                &kp EXCL        &kp RBKT
                  /*&                &*/          &mo FN_L      &trans               &trans                  /**/ &none                   &trans              &trans                /*&               &*/
                >;
         };
@@ -195,7 +195,7 @@
                    &none            &mwh MWH_UP  &mmv MMV_UP   &mkp MCLK            &kp LALT                /**/ &kp INSERT              &kp K_CMENU         &kp UP                  &kp PAGE_UP     &kp CAPS
                    &kp LSHFT        &mmv MMV_LT  &mmv MMV_DN   &mmv MMV_RT          &none                   /**/ &kp HOME                &kp LEFT            &kp DOWN                &kp RIGHT       &mt LSHFT END
                    &kp LCTRL        &mwh MWH_DN  &mwh MWH_LT   &mwh MWH_RT          &kp LGUI                /**/ &kp BACKSPACE           &kp DELETE          &kp SW_LANG             &kp PAGE_DOWN   &kp LCTRL
-                 /*&                &*/          &mkp RCLK     &mkp LCLK            &trans                  /**/ &none                   &trans              &kp LALT              /*&               &*/
+                 /*&                &*/          &mkp LCLK     &mkp RCLK            &trans                  /**/ &none                   &kp LALT            &trans                /*&               &*/
             >; 
         };
 
@@ -210,10 +210,10 @@
 
         function_layer {
             bindings = <
-                   &kp N1           &kp N2       &kp N3        &kp N4               &kp PAUSE_BREAK         /**/ &kp SLCK                &none               &none                   &kp C_VOL_UP    &none
+                   &kp N1           &kp N2       &kp N3        &kp N4               &kp N5                  /**/ &kp PAUSE_BREAK         &none               &kp LC(LA(DEL))         &kp C_VOL_UP    &kp SLCK
                    &kp F1           &kp F2       &kp F3        &kp F4               &kp F5                  /**/ &kp F11                 &kp C_PREV          &kp C_PP                &kp C_MUTE      &kp C_NEXT
                    &kp F6           &kp F7       &kp F8        &kp F9               &kp F10                 /**/ &kp F12                 &none               &none                   &kp C_VOL_DN    &kp LCTRL
-                 /*&                &*/          &trans        &kp LALT             &mo NUMPAD_L            /**/ &none                   &trans              &trans                /*&               &*/
+                 /*&                &*/          &kp LALT      &mo NUMPAD_L         &trans                  /**/ &none                   &trans              &kp TAB               /*&               &*/
             >;
         };
 
@@ -222,7 +222,7 @@
                    &kp Q            &kp M        &kp F         &kp P                &kp T                   /**/ &mt KP_NUM KP_MULTIPLY  &kp KP_N7           &kp KP_N8               &kp KP_N9         &kp KP_SUBTRACT
                    &kp N1           &kp N2       &kp N3        &kp N4               &kp N5                  /**/ &kp KP_PLUS             &kp KP_N4           &kp KP_N5               &kp KP_N6         &kp KP_DOT
                    &kp Z            &kp ESC      &kp C         &kp S                &kp B                   /**/ &kp BACKSPACE           &kp KP_N1           &kp KP_N2               &kp KP_N3         &kp KP_DIVIDE
-                 /*&                &*/          &trans        &kp LALT             &trans                  /**/ &none                   &trans              &kp KP_N0             /*&                 &*/
+                 /*&                &*/          &kp LALT      &trans               &trans                  /**/ &none                   &trans              &kp KP_N0             /*&                 &*/
             >;
         };
 
