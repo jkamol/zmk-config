@@ -16,6 +16,10 @@
   tapping-term-ms = <200>;
 };
 
+&lt {
+    flavor = "balanced";
+};
+
 &key_repeat {
   usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
 };
