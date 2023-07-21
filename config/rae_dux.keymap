@@ -199,7 +199,7 @@
                    &hmt LA(F4) N6   &kp N7       &hmt TASK_MNG N8 &kp N9            &kp N0                  /**/ &mt RALT CARET          &kp AMPS            &kp AT                  &kp HASH        &kp DLLR
                    &mt LSHFT N1     &mt LALT N2  &kp N3        &kp N4               &kp N5                  /**/ &kp GRAVE               &kp MINUS           &kp STAR                &kp EQUAL       &mt LSHFT SEMICOLON
                    &mt LCTRL LC(Z)  &kp BSPC     &mt LG(LS(S)) PSCRN &kp DELETE     &mt LGUI LC(Y)          /**/ &kp PRCNT               &kp LBKT            &kp BSLH                &kp EXCL        &kp RBKT
-                 /*&                &*/          &mo FN_L      &trans               &trans                  /**/ &none                   &trans              &trans                /*&               &*/
+                 /*&                &*/          &trans        &mo FN_L             &trans                  /**/ &none                   &trans              &trans                /*&               &*/
                >;
         };
 
