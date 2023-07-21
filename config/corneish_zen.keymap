@@ -100,28 +100,27 @@
       tapping-term-ms = <500>;
       bindings = <&kp>, <&kp>;
     };
-    mtl: mod-tap-left {
+    hml: home-row-left {
       compatible = "zmk,behavior-hold-tap";
-      label = "MOD_TAP_LEFT";
+      label = "HOME_ROW_LEFT";
       #binding-cells = <2>;
       flavor = "balanced";
-      tapping-term-ms = <280>;
-      quick-tap-ms = <0>;
+      tapping-term-ms = <200>;
+      quick-tap-ms = <50>;
       global-quick-tap;
       bindings = <&kp>, <&kp>;
-      hold-trigger-key-positions = <KEYS_R THUMBS>;
+      hold-trigger-key-positions = <KEYS_R EXTRA_L THUMBS>;
     };
-
-    mtr: mod-tap-right {
+    hmr: home-row-right {
       compatible = "zmk,behavior-hold-tap";
-      label = "MOD_TAP_RIGHT";
+      label = "HOME_ROW_RIGHT";
       #binding-cells = <2>;
       flavor = "balanced";
-      tapping-term-ms = <280>;
-      quick-tap-ms = <0>;
+      tapping-term-ms = <200>;
+      quick-tap-ms = <50>;
       global-quick-tap;
       bindings = <&kp>, <&kp>;
-      hold-trigger-key-positions = <KEYS_L THUMBS>;
+      hold-trigger-key-positions = <KEYS_L EXTRA_R THUMBS>;
     };
   };
 };
@@ -135,9 +134,9 @@
       label = "MAIN";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &kp TAB   &mtl LC(LSHFT) Q  &kp L         &kp D           &kp P             &mtl RALT B             &mtr RALT APOS          &kp F       &kp O           &kp U         &mtr LC(LSHFT) J &kp LC(RSHFT)
-        &kp LSHFT &mtl LSHFT C      &mtl LALT R   &kp S           &kp T             &kp G                   &kp M                   &kp N       &kp A           &kp I         &mtr LSHFT Y     &kp LSHFT
-        &kp LCTRL &mt LCTRL Z       &kp X         &kp V           &kp W             &mtl LGUI K             &mtr RGUI SEMICOLON     &kp H       &kp SLASH       &kp COMMA     &mt LCTRL DOT    &kp LCTRL
+        &kp TAB   &mt LC(LSHFT) Q   &kp L         &kp D           &kp P             &mt RALT B              &mt RALT APOS           &kp F       &kp O           &kp U         &mt LC(LSHFT) J  &kp LC(RSHFT)
+        &kp LSHFT &hml LSHFT C      &hml LALT R   &kp S           &kp T             &kp G                   &kp M                   &kp N       &kp A           &kp I         &hmr LSHFT Y     &kp LSHFT
+        &kp LCTRL &mt LCTRL Z       &kp X         &kp V           &kp W             &mt LGUI K              &mt RGUI SEMICOLON      &kp H       &kp SLASH       &kp COMMA     &mt LCTRL DOT    &kp LCTRL
     /*╰─────────────────────────────────────╮*/   &mt LALT BSPC   &lt SYM_L SPACE   &mt LCTRL TAB           &lt FN_L ENTER          &lt NAV_L E &kp LSHFT          /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;  
@@ -159,10 +158,10 @@
       label = "SYM";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &trans      &hmt LA(F4) N6  &kp N7        &hmt TASK_MNG N8 &kp N9           &kp N0                  &mtr RALT CARET         &kp AMPS    &kp AT          &kp HASH      &kp DLLR        &trans
+        &trans      &hmt LA(F4) N6  &kp N7        &hmt TASK_MNG N8 &kp N9           &kp N0                  &mt RALT CARET          &kp AMPS    &kp AT          &kp HASH      &kp DLLR        &trans
         &trans      &mt LSHFT N1    &mt LALT N2   &kp N3          &kp N4            &kp N5                  &kp GRAVE               &kp MINUS   &kp STAR        &kp EQUAL     &kp SEMICOLON   &trans
         &trans      &kp LC(Z)       &kp BSPC      &mt LG(LS(S)) PSCRN &kp DELETE    &mt LGUI LC(Y)          &kp PRCNT               &kp LBKT    &kp BSLH        &kp EXCL      &kp RBKT        &trans
-    /*╰─────────────────────────────────────╮*/   &trans          &mo FN_L          &trans                  &trans                  &trans      &trans             /*╭─────────────────────────────────────╯*/
+    /*╰─────────────────────────────────────╮*/   &trans          &trans            &mo FN_L                  &trans                  &trans      &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;
     };
