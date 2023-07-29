@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
 
 &sk {
   release-after-ms = <750>;
@@ -23,6 +24,26 @@
 &key_repeat {
   usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
 };
+
+// Mouse move
+&mmv {    
+        time-to-max-speed-ms = <500>;
+        acceleration-exponent=<1>;
+};
+// Mouse wheel
+&mwh {    
+        time-to-max-speed-ms = <2000>;
+        acceleration-exponent=<0>;
+}; 
+
+#define MMV_UP MOVE_VERT(-1600)
+#define MMV_DN MOVE_VERT(1600)
+#define MMV_LT MOVE_HOR(-1600)
+#define MMV_RT MOVE_HOR(1600)
+#define MWH_UP SCROLL_VERT(20)
+#define MWH_DN SCROLL_VERT(-20)
+#define MWH_LT SCROLL_HOR(-20)
+#define MWH_RT SCROLL_HOR(20)
 
 #define MAIN_L   0
 #define QWERTY_L 1
@@ -105,7 +126,7 @@
       label = "HOME_ROW_LEFT";
       #binding-cells = <2>;
       flavor = "balanced";
-      tapping-term-ms = <200>;
+      tapping-term-ms = <150>;
       quick-tap-ms = <50>;
       global-quick-tap;
       bindings = <&kp>, <&kp>;
@@ -116,7 +137,7 @@
       label = "HOME_ROW_RIGHT";
       #binding-cells = <2>;
       flavor = "balanced";
-      tapping-term-ms = <200>;
+      tapping-term-ms = <150>;
       quick-tap-ms = <50>;
       global-quick-tap;
       bindings = <&kp>, <&kp>;
@@ -170,10 +191,10 @@
       label = "NAVI";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &trans      &none           &kp PAGE_UP   &kp UP          &none             &kp LALT                &kp INSERT              &kp K_CMENU &kp UP          &kp PAGE_UP   &kp CAPS        &trans
-        &trans      &none           &kp LEFT      &kp DOWN        &kp RIGHT         &none                   &kp HOME                &kp LEFT    &kp DOWN        &kp RIGHT     &mt LSHFT END   &trans
-        &trans      &none           &kp PAGE_DOWN &none           &none             &kp LGUI                &kp BACKSPACE           &kp DELETE  &kp SW_LANG     &kp PAGE_DOWN &kp LCTRL       &trans
-    /*╰─────────────────────────────────────╮*/   &trans          &trans            &trans                  &trans                  &kp LALT    &trans             /*╭─────────────────────────────────────╯*/
+        &trans      &none           &mwh MWH_UP   &mmv MMV_UP     &mkp MCLK         &kp LALT                &kp INSERT              &kp K_CMENU &kp UP          &kp PAGE_UP   &kp CAPS        &trans
+        &trans      &none           &mmv MMV_LT   &mmv MMV_DN     &mmv MMV_RT       &none                   &kp HOME                &kp LEFT    &kp DOWN        &kp RIGHT     &mt LSHFT END   &trans
+        &trans      &none           &mwh MWH_DN   &mwh MWH_LT     &mwh MWH_RT       &kp LGUI                &kp BACKSPACE           &kp DELETE  &kp SW_LANG     &kp PAGE_DOWN &kp LCTRL       &trans
+    /*╰─────────────────────────────────────╮*/   &trans          &mkp RCLK         &mkp LCLK               &trans                  &kp LALT    &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >; 
     };
