@@ -34,7 +34,7 @@
 
 // Mouse move
 &mmv {    
-        time-to-max-speed-ms = <1000>;
+        time-to-max-speed-ms = <500>;
         acceleration-exponent=<1>;
 };
 // Mouse wheel
@@ -131,7 +131,7 @@
             label = "HOME_ROW_LEFT";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <50>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -142,7 +142,7 @@
             label = "HOME_ROW_RIGHT";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <50>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
