@@ -160,7 +160,7 @@
         main_layer {
             bindings = <
                    &mtb LC(LSHFT) Q &kp L           &kp D           &kp P           &mtb RALT B     /**/    &mtb RALT APOS          &kp F           &kp O               &kp U           &mtb LC(LSHFT) J
-                   &hml LSHFT C     &hml LALT R     &kp S           &kp T           &kp G           /**/    &kp M                   &kp N           &kp A               &kp I           &hmr LSHFT Y
+                   &hml LSHFT C     &hml LALT R     &hml LCTRL S    &kp T           &kp G           /**/    &kp M                   &kp N           &kp A               &kp I           &hmr LSHFT Y
                    &mtb LCTRL Z     &kp X           &kp V           &kp W           &mtb LGUI K     /**/    &mtb RGUI SEMICOLON     &kp H           &kp SLASH           &kp COMMA       &mtb LCTRL DOT
                  /*&                &*/             &lt SYM_L SPACE &mt LCTRL TAB   &kp BSPC        /**/    &none                   &lt FN_L ENTER  &lt NAV_L E       /*&               &*/
             >;  
@@ -178,7 +178,7 @@
         sym_layer {
             bindings = <
                    &hmt LA(F4) N6   &kp N7          &hmt TASK_MNG N8 &kp N9         &kp N0          /**/    &mtb RALT CARET         &kp AMPS        &kp AT              &kp HASH        &kp DLLR
-                   &mtb LSHFT N1    &mtb LALT N2    &kp N3          &kp N4          &kp N5          /**/    &kp GRAVE               &kp MINUS       &kp STAR            &kp EQUAL       &mtb LSHFT SEMICOLON
+                   &mtb LSHFT N1    &mtb LALT N2    &hml LCTRL N3   &kp N4          &kp N5          /**/    &kp GRAVE               &kp MINUS       &kp STAR            &kp EQUAL       &mtb LSHFT SEMICOLON
                    &mtb LCTRL LC(Z) &kp BSPC        &mtb LG(LS(S)) PSCRN &kp DELETE &mtb LGUI LC(Y) /**/    &kp PRCNT               &kp LBKT        &kp BSLH            &kp EXCL        &kp RBKT
                  /*&                &*/             &trans          &mo FN_L        &trans          /**/    &none                   &trans          &trans            /*&               &*/
                >;
