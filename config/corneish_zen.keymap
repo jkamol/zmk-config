@@ -96,8 +96,8 @@
       │ 24│ 25  26  27  28  29 │ │ 30  31  32  33  34 │35 │
       ╰──────────╮  36  37  38 │ │ 39  40  41  ╭──────────╯
                  ╰─────────────╯ ╰─────────────╯        */  
-    COMBO(enter, &kp ENTER, 14 15 16, 30)
-    COMBO(escape, &kp ESCAPE, 2 3 4, 30)
+    COMBO(enter, &kp ENTER, 14 15 16, 15)
+    COMBO(escape, &kp ESCAPE, 2 3 4, 15)
 
     COMBO(board_layer_l, &sl BOARD_L, 25 26 27 28, 100)
     COMBO(board_layer_r, &sl BOARD_L, 31 32 33 34, 100)
@@ -105,10 +105,10 @@
     COMBO(function_layer_tg, &tog FN_L, 18 19 30 31, 50)
     COMBO(main_layer, &to MAIN_L, 13 14 15 16, 100)
     COMBO(mirror_layer_mo, &mo MIRROR_L, 37 38, 50)
-    COMBO(nav_layer_mo, &mo NAV_L, 36 37, 50)
+    COMBO(nav_layer_mo, &mo NAV_L, 37 38, 50)
     COMBO(numpad_layer_mo, &mo NUMPAD_L, 16 28, 50)
     COMBO(numpad_layer_tg, &tog NUMPAD_L, 16 17 28 29, 50)
-    COMBO(numrow_layer_mo, &mo NUMROW_L, 37 40, 50)
+    COMBO(numrow_layer_mo, &mo NUMROW_L, 38 39, 50)
     COMBO(qwerty_layer, &to QWERTY_L, 1 2 3 4, 100)
   };
 
@@ -158,7 +158,7 @@
         &kp TAB   &mt LC(LSHFT) Q   &kp L         &kp D           &kp P             &mt RALT B              &mt RALT APOS           &kp F       &kp O           &kp U         &mt LC(LSHFT) J  &kp LC(RSHFT)
         &kp LSHFT &hml LSHFT C      &hml LALT R   &kp S           &kp T             &kp G                   &kp M                   &kp N       &kp A           &kp I         &hmr LSHFT Y     &kp LSHFT
         &kp LCTRL &mt LCTRL Z       &kp X         &kp V           &kp W             &mt LGUI K              &mt RGUI SEMICOLON      &kp H       &kp SLASH       &kp COMMA     &mt LCTRL DOT    &kp LCTRL
-    /*╰─────────────────────────────────────╮*/   &mt LALT BSPC   &lt SYM_L SPACE   &mt LCTRL TAB           &lt FN_L ENTER          &lt NAV_L E &kp LSHFT          /*╭─────────────────────────────────────╯*/
+    /*╰─────────────────────────────────────╮*/   &mt LALT BSPC   &mt LCTRL TAB     &lt SYM_L SPACE         &lt NAV_L E             &lt FN_L ENTER &kp LSHFT       /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;  
     };
@@ -182,7 +182,7 @@
         &trans      &hmt LA(F4) N6  &kp N7        &hmt TASK_MNG N8 &kp N9           &kp N0                  &mt RALT CARET          &kp AMPS    &kp AT          &kp HASH      &kp DLLR        &trans
         &trans      &mt LSHFT N1    &mt LALT N2   &kp N3          &kp N4            &kp N5                  &kp GRAVE               &kp MINUS   &kp STAR        &kp EQUAL     &kp SEMICOLON   &trans
         &trans      &kp LC(Z)       &kp BSPC      &mt LG(LS(S)) PSCRN &kp DELETE    &mt LGUI LC(Y)          &kp PRCNT               &kp LBKT    &kp BSLH        &kp EXCL      &kp RBKT        &trans
-    /*╰─────────────────────────────────────╮*/   &trans          &trans            &mo FN_L                  &trans                  &trans      &trans             /*╭─────────────────────────────────────╯*/
+    /*╰─────────────────────────────────────╮*/   &trans          &mo FN_L          &trans                  &trans                  &trans      &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;
     };
@@ -194,7 +194,7 @@
         &trans      &none           &mwh MWH_UP   &mmv MMV_UP     &mkp MCLK         &kp LALT                &kp INSERT              &kp K_CMENU &kp UP          &kp PAGE_UP   &kp CAPS        &trans
         &trans      &none           &mmv MMV_LT   &mmv MMV_DN     &mmv MMV_RT       &none                   &kp HOME                &kp LEFT    &kp DOWN        &kp RIGHT     &mt LSHFT END   &trans
         &trans      &none           &mwh MWH_DN   &mwh MWH_LT     &mwh MWH_RT       &kp LGUI                &kp BACKSPACE           &kp DELETE  &kp SW_LANG     &kp PAGE_DOWN &kp LCTRL       &trans
-    /*╰─────────────────────────────────────╮*/   &trans          &mkp RCLK         &mkp LCLK               &trans                  &kp LALT    &trans             /*╭─────────────────────────────────────╯*/
+    /*╰─────────────────────────────────────╮*/   &trans          &mkp LCLK         &mkp RCLK               &trans                  &kp LALT    &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >; 
     };
@@ -218,7 +218,7 @@
         &trans      &kp N1          &kp N2        &kp N3          &kp N4            &kp N5                  &kp SLCK                &none       &kp LC(LA(DEL)) &kp C_VOL_UP  &none           &kp PAUSE_BREAK
         &trans      &kp F1          &kp F2        &kp F3          &kp F4            &kp F5                  &kp F11                 &kp C_PREV  &kp C_PP        &kp C_MUTE    &kp C_NEXT      &trans
         &trans      &kp F6          &kp F7        &kp F8          &kp F9            &kp F10                 &kp F12                 &none       &none           &kp C_VOL_DN  &none           &trans
-    /*╰─────────────────────────────────────╮*/   &trans          &kp LALT          &mo NUMPAD_L            &trans                  &kp TAB     &trans             /*╭─────────────────────────────────────╯*/
+    /*╰─────────────────────────────────────╮*/   &trans          &mo NUMPAD_L      &kp LALT                &kp TAB                 &trans      &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
        >;
     };
@@ -230,7 +230,7 @@
         &trans      &kp Q           &kp M         &kp F           &kp P             &kp T                   &hmt KP_NUM KP_MULTIPLY &kp KP_N7   &kp KP_N8       &kp KP_N9     &kp KP_SUBTRACT &trans
         &trans      &kp N1          &kp N2        &kp N3          &kp N4            &kp N5                  &kp KP_PLUS             &kp KP_N4   &kp KP_N5       &kp KP_N6     &kp KP_DOT      &trans
         &trans      &kp Z           &kp ESC       &kp C           &kp S             &kp B                   &kp BACKSPACE           &kp KP_N1   &kp KP_N2       &kp KP_N3     &kp KP_DIVIDE   &trans
-    /*╰─────────────────────────────────────╮*/   &kp LALT        &trans            &trans                  &trans                  &kp KP_N0   &trans             /*╭─────────────────────────────────────╯*/
+    /*╰─────────────────────────────────────╮*/   &trans          &trans            &kp LALT                &trans                  &kp KP_N0   &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;
     };
