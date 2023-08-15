@@ -97,6 +97,7 @@
                       ╰────────╯ ╰─────────╯           */
 
 
+        COMBO(dot, &kp DOT, 11 21, 15)
         COMBO(enter, &kp ENTER, 11 12, 15)
         COMBO(escape, &kp ESCAPE, 1 2, 15)
         COMBO(swlang, &kp SW_LANG, 10 11, 30)
