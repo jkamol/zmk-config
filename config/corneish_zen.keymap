@@ -191,9 +191,9 @@
       label = "NAVI";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &trans      &none           &mwh MWH_UP   &mmv MMV_UP     &mkp MCLK         &kp LALT                &kp INSERT              &kp K_CMENU &kp UP          &kp PAGE_UP   &kp CAPS        &trans
-        &trans      &none           &mmv MMV_LT   &mmv MMV_DN     &mmv MMV_RT       &none                   &kp HOME                &kp LEFT    &kp DOWN        &kp RIGHT     &mt LSHFT END   &trans
-        &trans      &none           &mwh MWH_DN   &mwh MWH_LT     &mwh MWH_RT       &kp LGUI                &kp BACKSPACE           &kp DELETE  &kp SW_LANG     &kp PAGE_DOWN &kp LCTRL       &trans
+        &trans      &kp LC(LSHFT)   &mwh MWH_UP   &mmv MMV_UP     &mkp MCLK         &kp LALT                &kp INSERT              &kp K_CMENU &kp UP          &kp PAGE_UP   &kp CAPS        &trans
+        &trans      &kp LSHFT       &mmv MMV_LT   &mmv MMV_DN     &mmv MMV_RT       &none                   &kp HOME                &kp LEFT    &kp DOWN        &kp RIGHT     &mt LSHFT END   &trans
+        &trans      &kp LCTRL       &mwh MWH_DN   &mwh MWH_LT     &mwh MWH_RT       &kp LGUI                &kp BACKSPACE           &kp DELETE  &kp SW_LANG     &kp PAGE_DOWN &kp LCTRL       &trans
     /*╰─────────────────────────────────────╮*/   &trans          &mkp LCLK         &mkp RCLK               &trans                  &kp LALT    &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >; 
