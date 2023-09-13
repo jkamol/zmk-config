@@ -55,7 +55,7 @@
 #define FN_L     5
 #define NUMPAD_L 6
 #define BOARD_L  7
-#define MIRROR_L 8
+#define SHCT_L   8
 
 #define MEH LC(LA(LSHFT))
 #define SW_LANG LA(LSHFT)
@@ -107,7 +107,7 @@
         COMBO(board_layer_r, &sl BOARD_L, 26 27 28 29, 100)
         COMBO(function_layer_tg, &tog FN_L, 15 16 25 26, 50)
         COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
-        COMBO(mirror_layer_mo, &mo MIRROR_L, 30 31, 30)
+        COMBO(mirror_layer_mo, &mo SHCT_L, 30 31, 30)
         COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
         COMBO(numpad_layer_tg, &tog NUMPAD_L, 13 14 23 24, 50)
         COMBO(numrow_layer_mo, &mo NUMROW_L, 31 32, 50)
@@ -231,13 +231,13 @@
             >;
         };
 
-        main_mirror {
+        shortcut_layer {
             bindings = <
-                   &kp APOS         &kp Y           &kp U           &kp L           &kp J           /**/    &kp B                   &kp P           &kp F               &kp W           &kp Q
-                   &kp O            &kp I           &kp E           &kp N           &kp M           /**/    &kp G                   &kp T           &kp S               &kp R           &kp A
-                   &kp SLASH        &kp DOT         &kp COMMA       &kp H           &kp K           /**/    &kp V                   &kp D           &kp C               &kp X           &kp Z
-                                                                    &none           &none           /**/    &kp SPACE               &kp TAB
-            >;  
+                   &none            &kp HOME        &kp UP          &kp END         &none           /**/    &none                   &none           &none               &none           &none
+                   &kp LC(A)        &kp LEFT        &kp DOWN        &kp RIGHT       &none           /**/    &none                   &none           &none               &none           &none
+                   &kp LC(Z)        &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)       /**/    &none                   &none           &none               &none           &none
+                                                                    &none           &none           /**/    &trans                  &trans
+            >; 
         };
 
     };
