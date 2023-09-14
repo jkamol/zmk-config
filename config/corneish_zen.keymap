@@ -1,6 +1,6 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
 &sk {
@@ -18,7 +18,7 @@
 };
 
 &lt {
-    flavor = "balanced";
+  flavor = "balanced";
 };
 
 &key_repeat {
@@ -27,13 +27,13 @@
 
 // Mouse move
 &mmv {    
-        time-to-max-speed-ms = <500>;
-        acceleration-exponent=<1>;
+  time-to-max-speed-ms = <500>;
+  acceleration-exponent=<1>;
 };
 // Mouse wheel
 &mwh {    
-        time-to-max-speed-ms = <2000>;
-        acceleration-exponent=<0>;
+  time-to-max-speed-ms = <2000>;
+  acceleration-exponent=<0>;
 }; 
 
 #define MMV_UP MOVE_VERT(-1600)
@@ -53,7 +53,7 @@
 #define FN_L     5
 #define NUMPAD_L 6
 #define BOARD_L  7
-#define MIRROR_L 8
+#define SHCT_L   8
 
 #define SW_LANG LA(LSHFT)
 #define TASK_MNG LC(LS(ESC))
@@ -96,15 +96,17 @@
       │ 24│ 25  26  27  28  29 │ │ 30  31  32  33  34 │35 │
       ╰──────────╮  36  37  38 │ │ 39  40  41  ╭──────────╯
                  ╰─────────────╯ ╰─────────────╯        */  
-    COMBO(enter, &kp ENTER, 14 15 16, 15)
-    COMBO(escape, &kp ESCAPE, 2 3 4, 15)
+    COMBO(dot, &kp DOT, 13 23, 15)
+    COMBO(enter, &kp ENTER, 14 15, 15)
+    COMBO(escape, &kp ESCAPE, 2 3, 15)
+    COMBO(swlang, &kp SW_LANG, 10 11, 30)
 
     COMBO(board_layer_l, &sl BOARD_L, 25 26 27 28, 100)
     COMBO(board_layer_r, &sl BOARD_L, 31 32 33 34, 100)
     COMBO(function_layer_mo, &mo FN_L, 17 29, 50)
     COMBO(function_layer_tg, &tog FN_L, 18 19 30 31, 50)
     COMBO(main_layer, &to MAIN_L, 13 14 15 16, 100)
-    COMBO(mirror_layer_mo, &mo MIRROR_L, 37 38, 50)
+    COMBO(shortcut_layer_mo, &mo SHCT_L, 37 38, 50)
     COMBO(nav_layer_mo, &mo NAV_L, 37 38, 50)
     COMBO(numpad_layer_mo, &mo NUMPAD_L, 16 28, 50)
     COMBO(numpad_layer_tg, &tog NUMPAD_L, 16 17 28 29, 50)
