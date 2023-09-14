@@ -55,6 +55,7 @@
 #define BOARD_L  7
 #define SHCT_L   8
 
+#define MEH LC(LA(LSHFT))
 #define SW_LANG LA(LSHFT)
 #define TASK_MNG LC(LS(ESC))
 
@@ -79,7 +80,7 @@
   };
 
   combos {
-    compatible = "zmk,combos";  
+    compatible = "zmk,combos";
 
     // shortcut
     #define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
@@ -101,13 +102,12 @@
     COMBO(escape, &kp ESCAPE, 2 3, 15)
     COMBO(swlang, &kp SW_LANG, 10 11, 30)
 
+    COMBO(board_layer_mo, &mo BOARD_L, 17 29, 50)
     COMBO(board_layer_l, &sl BOARD_L, 25 26 27 28, 100)
     COMBO(board_layer_r, &sl BOARD_L, 31 32 33 34, 100)
-    COMBO(function_layer_mo, &mo FN_L, 17 29, 50)
     COMBO(function_layer_tg, &tog FN_L, 18 19 30 31, 50)
     COMBO(main_layer, &to MAIN_L, 13 14 15 16, 100)
     COMBO(shortcut_layer_mo, &mo SHCT_L, 37 38, 50)
-    COMBO(nav_layer_mo, &mo NAV_L, 37 38, 50)
     COMBO(numpad_layer_mo, &mo NUMPAD_L, 16 28, 50)
     COMBO(numpad_layer_tg, &tog NUMPAD_L, 16 17 28 29, 50)
     COMBO(numrow_layer_mo, &mo NUMROW_L, 38 39, 50)
@@ -145,6 +145,14 @@
       bindings = <&kp>, <&kp>;
       hold-trigger-key-positions = <KEYS_L EXTRA_R THUMBS>;
     };
+    mtb: mod-tap-balanced {
+      compatible = "zmk,behavior-hold-tap";
+      label = "MOD_TAP_BALANCED";
+      #binding-cells = <2>;
+      flavor = "balanced";
+      tapping-term-ms = <200>;
+      bindings = <&kp>, <&kp>;
+    };
   };
 };
 
@@ -157,9 +165,9 @@
       label = "MAIN";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &kp TAB   &mt LC(LSHFT) Q   &kp L         &kp D           &kp P             &mt RALT B              &mt RALT APOS           &kp F       &kp O           &kp U         &mt LC(LSHFT) J  &kp LC(RSHFT)
-        &kp LSHFT &hml LSHFT C      &hml LALT R   &kp S           &kp T             &kp G                   &kp M                   &kp N       &kp A           &kp I         &hmr LSHFT Y     &kp LSHFT
-        &kp LCTRL &mt LCTRL Z       &kp X         &kp V           &kp W             &mt LGUI K              &mt RGUI SEMICOLON      &kp H       &kp SLASH       &kp COMMA     &mt LCTRL DOT    &kp LCTRL
+        &kp TAB   &mtb LC(LSHFT) Q  &kp L         &kp D           &kp P             &mtb RALT B             &mtb RALT APOS          &kp F       &kp O           &kp U         &mtb LC(LSHFT) J &kp LC(RSHFT)
+        &kp LSHFT &hml LSHFT C      &hml LALT R   &hml LCTRL S    &kp T             &kp G                   &kp M                   &kp N       &kp A           &kp I         &hmr LSHFT Y     &kp LSHFT
+        &kp LCTRL &mtb LCTRL Z      &kp X         &kp V           &kp W             &mtb LGUI K             &mtb RGUI SEMI          &kp H       &kp SLASH       &kp COMMA     &mtb LCTRL DOT   &kp LCTRL
     /*╰─────────────────────────────────────╮*/   &mt LALT BSPC   &mt LCTRL TAB     &lt SYM_L SPACE         &lt NAV_L E             &lt FN_L ENTER &kp LSHFT       /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;  
@@ -170,7 +178,7 @@
       bindings = < 
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &trans      &kp Q           &kp W         &kp E           &kp R             &kp T                   &kp Y                   &kp U       &kp I           &kp O         &kp P           &trans
-        &trans      &kp A           &kp S         &kp D           &kp F             &kp G                   &kp H                   &kp J       &kp K           &kp L         &kp SEMICOLON   &trans
+        &trans      &kp A           &kp S         &kp D           &kp F             &kp G                   &kp H                   &kp J       &kp K           &kp L         &kp SEMI        &trans
         &trans      &kp Z           &kp X         &kp C           &kp V             &kp B                   &kp N                   &kp M       &kp COMMA       &kp DOT       &mt LCTRL SLASH &trans
     /*╰─────────────────────────────────────╮*/   &trans          &trans            &trans                  &trans                  &trans      &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
@@ -181,9 +189,9 @@
       label = "SYM";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &trans      &hmt LA(F4) N6  &kp N7        &hmt TASK_MNG N8 &kp N9           &kp N0                  &mt RALT CARET          &kp AMPS    &kp AT          &kp HASH      &kp DLLR        &trans
-        &trans      &mt LSHFT N1    &mt LALT N2   &kp N3          &kp N4            &kp N5                  &kp GRAVE               &kp MINUS   &kp STAR        &kp EQUAL     &kp SEMICOLON   &trans
-        &trans      &kp LC(Z)       &kp BSPC      &mt LG(LS(S)) PSCRN &kp DELETE    &mt LGUI LC(Y)          &kp PRCNT               &kp LBKT    &kp BSLH        &kp EXCL      &kp RBKT        &trans
+        &trans      &hmt LA(F4) N6  &kp N7        &hmt TASK_MNG N8 &kp N9           &kp N0                  &mtb RALT CARET         &kp AMPS    &kp AT          &kp HASH      &kp DLLR        &trans
+        &trans      &mtb LSHFT N1   &mtb LALT N2  &hml LCTRL N3   &kp N4            &kp N5                  &kp GRAVE               &kp MINUS   &kp STAR        &kp EQUAL     &mtb LSHFT SEMI &trans
+        &trans      &mtb LCTRL DOT  &kp BSPC      &mtb LG(LS(S)) PSCRN &kp DELETE   &mtb LGUI LC(Y)         &kp PRCNT               &kp LBKT    &kp BSLH        &kp EXCL      &kp RBKT        &trans
     /*╰─────────────────────────────────────╮*/   &trans          &mo FN_L          &trans                  &trans                  &trans      &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;
@@ -193,9 +201,9 @@
       label = "NAVI";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &trans      &kp LC(LSHFT)   &mwh MWH_UP   &mmv MMV_UP     &mkp MCLK         &kp LALT                &kp INSERT              &kp K_CMENU &kp UP          &kp PAGE_UP   &kp CAPS        &trans
-        &trans      &kp LSHFT       &mmv MMV_LT   &mmv MMV_DN     &mmv MMV_RT       &none                   &kp HOME                &kp LEFT    &kp DOWN        &kp RIGHT     &mt LSHFT END   &trans
-        &trans      &kp LCTRL       &mwh MWH_DN   &mwh MWH_LT     &mwh MWH_RT       &kp LGUI                &kp BACKSPACE           &kp DELETE  &kp SW_LANG     &kp PAGE_DOWN &kp LCTRL       &trans
+        &trans      &kp LC(LSHFT)    &mwh MWH_UP  &mmv MMV_UP     &mkp MCLK         &kp LALT                &none                   &kp K_CMENU &kp UP          &kp PAGE_UP   &kp CAPS        &trans
+        &trans      &kp LSHFT        &mmv MMV_LT  &mmv MMV_DN     &mmv MMV_RT       &kp INSERT              &kp HOME                &kp LEFT    &kp DOWN        &kp RIGHT     &mtb LSHFT END  &trans
+        &trans      &mtb LCTRL LC(Z) &mwh MWH_DN  &kp LC(C)       &kp LC(V)         &kp LGUI                &kp BACKSPACE           &kp DELETE  &kp SW_LANG     &kp PAGE_DOWN &kp LCTRL       &trans
     /*╰─────────────────────────────────────╮*/   &trans          &mkp LCLK         &mkp RCLK               &trans                  &kp LALT    &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >; 
@@ -205,9 +213,9 @@
       label = "NUMR";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &trans      &kp EXCL        &kp AT        &kp HASH        &kp DLLR          &kp PRCNT               &kp CARET               &kp AMPS    &kp STAR        &kp LPAR      &kp RPAR        &trans
-        &trans      &mt LSHFT N1    &kp N2        &kp N3          &kp N4            &kp N5                  &kp N6                  &kp N7      &kp N8          &kp N9        &kp N0          &trans
-        &trans      &kp LC(Z)       &kp LC(X)     &kp LC(C)       &kp LC(V)         &kp LC(Y)               &kp BACKSPACE           &kp DELETE  &kp SLASH       &kp COMMA     &kp DOT         &trans
+        &trans      &kp EXCL         &kp AT       &kp HASH        &kp DLLR          &kp PRCNT               &kp CARET               &kp AMPS    &kp STAR        &kp LPAR      &kp RPAR        &trans
+        &trans      &mtb LSHFT N1    &kp N2       &kp N3          &kp N4            &kp N5                  &kp N6                  &kp N7      &kp N8          &kp N9        &mtb LSHFT N0   &trans
+        &trans      &kp LC(Z)        &kp LC(X)    &kp LC(C)       &kp LC(V)         &kp LC(Y)               &kp BACKSPACE           &kp DELETE  &kp SLASH       &kp COMMA     &mtb LCTRL DOT  &trans
     /*╰─────────────────────────────────────╮*/   &trans          &trans            &trans                  &trans                  &trans      &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;
@@ -253,9 +261,9 @@
       label = "MIRR";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &trans      &kp APOS        &kp Y         &kp U           &kp L             &kp J                   &kp B                   &kp P       &kp F           &kp W         &kp Q           &trans
-        &trans      &kp O           &kp I         &kp E           &kp N             &kp M                   &kp G                   &kp T       &kp S           &kp R         &kp A           &trans
-        &trans      &kp SLASH       &kp DOT       &kp COMMA       &kp H             &kp K                   &kp V                   &kp D       &kp C           &kp X         &kp Z           &trans
+        &trans      &none           &kp HOME      &kp UP          &kp END           &none                   &none                   &none       &none           &none         &none           &trans
+        &trans      &kp LC(A)       &kp LEFT      &kp DOWN        &kp RIGHT         &none                   &none                   &none       &none           &none         &none           &trans
+        &trans      &kp LC(Z)       &kp LC(X)     &kp LC(C)       &kp LC(V)         &kp LC(Y)               &none                   &none       &none           &none         &none           &trans
     /*╰─────────────────────────────────────╮*/   &trans          &trans            &trans                  &trans                  &trans      &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;  
