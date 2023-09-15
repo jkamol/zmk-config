@@ -12,11 +12,6 @@
   release-after-ms = <3000>;
 };
 
-&mt {
-  flavor = "balanced";
-  tapping-term-ms = <200>;
-};
-
 &lt {
   flavor = "balanced";
 };
@@ -69,14 +64,6 @@
   chosen {
     zmk,matrix_transform = &default_transform;
     //zmk,matrix_transform = &five_column_transform;
-  };
-
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-      if-layers = <SYM_L NAV_L>;
-      then-layer = <NUMROW_L>;
-    };
   };
 
   combos {
@@ -237,10 +224,10 @@
       label = "NUMP";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &trans      &kp Q           &kp M         &kp F           &kp P             &kp T                   &hmt KP_NUM KP_MULTIPLY &kp KP_N7   &kp KP_N8       &kp KP_N9     &kp KP_SUBTRACT &trans
-        &trans      &kp N1          &kp N2        &kp N3          &kp N4            &kp N5                  &kp KP_PLUS             &kp KP_N4   &kp KP_N5       &kp KP_N6     &kp KP_DOT      &trans
-        &trans      &kp Z           &kp ESC       &kp C           &kp S             &kp B                   &kp BACKSPACE           &kp KP_N1   &kp KP_N2       &kp KP_N3     &kp KP_DIVIDE   &trans
-    /*╰─────────────────────────────────────╮*/   &trans          &trans            &kp LALT                &trans                  &kp KP_N0   &trans             /*╭─────────────────────────────────────╯*/
+        &trans      &kp Q           &kp M         &kp F           &kp P             &kp T                   &hmt KP_NUM KP_MULTIPLY &kp KP_N7   &kp KP_N8       &kp KP_N9     &kp KP_DIVIDE   &trans
+        &trans      &kp N1          &kp N2        &kp N3          &kp N4            &kp N5                  &kp KP_PLUS             &kp KP_N4   &kp KP_N5       &kp KP_N6     &kp KP_SUBTRACT &trans
+        &trans      &kp Z           &kp ESC       &kp C           &kp S             &kp B                   &kp BACKSPACE           &kp KP_N1   &kp KP_N2       &kp KP_N3     &kp KP_DOT      &trans
+    /*╰─────────────────────────────────────╮*/   &trans          &trans            &kp LALT                &kp KP_N0               &trans      &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
       >;
     };
@@ -257,12 +244,12 @@
       >;
     };
 
-    main_mirror {
-      label = "MIRR";
+    shortcut_layer {
+      label = "SHORT";
       bindings = <
     //╭────────────────────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &trans      &none           &kp HOME      &kp UP          &kp END           &none                   &none                   &none       &none           &none         &none           &trans
-        &trans      &kp LC(A)       &kp LEFT      &kp DOWN        &kp RIGHT         &none                   &none                   &none       &none           &none         &none           &trans
+        &trans      &mtb LSHFT LC(A) &kp LEFT     &kp DOWN        &kp RIGHT         &none                   &none                   &none       &none           &none         &kp LSHFT       &trans
         &trans      &kp LC(Z)       &kp LC(X)     &kp LC(C)       &kp LC(V)         &kp LC(Y)               &none                   &none       &none           &none         &none           &trans
     /*╰─────────────────────────────────────╮*/   &trans          &trans            &trans                  &trans                  &trans      &trans             /*╭─────────────────────────────────────╯*/
     //                                      ╰──────────────────────────────────────────────────────────╯  ╰──────────────────────────────────────────────────────────╯
