@@ -68,14 +68,6 @@
 #define EXTRA_R 5 6 7 15 16 17 25 26 27                 // extra right-hand keys
 
 / {
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-      if-layers = <SYM_L NAV_L>;
-      then-layer = <NUMROW_L>;
-    };
-  };
-
   combos {
     compatible = "zmk,combos";
 
@@ -97,7 +89,6 @@
                   ╰────────╯ ╰─────────╯           */
 
 
-    COMBO(dot, &kp DOT, 11 21, 15)
     COMBO(enter, &kp ENTER, 11 12, 15)
     COMBO(escape, &kp ESCAPE, 1 2, 15)
     COMBO(swlang, &kp SW_LANG, 10 11, 30)
@@ -182,7 +173,7 @@
         &hmt LA(F4) N6   &kp N7          &hmt TASK_MNG N8 &kp N9         &kp N0          /**/    &mtb RALT CARET         &kp AMPS        &kp AT              &kp HASH        &kp DLLR
         &mtb LSHFT N1    &mtb LALT N2    &hml LCTRL N3    &kp N4         &kp N5          /**/    &kp GRAVE               &kp MINUS       &kp STAR            &kp EQUAL       &mtb LSHFT SEMICOLON
         &mtb LCTRL DOT   &kp BSPC        &mtb LG(LS(S)) PSCRN &kp DELETE &mtb LGUI LC(Y) /**/    &kp PRCNT               &kp LBKT        &kp BSLH            &kp EXCL        &kp RBKT
-                                                          &mo FN_L       &trans          /**/    &trans                  &trans
+                                                          &mo FN_L       &trans          /**/    &mo NUMROW_L            &trans
       >;
     };
 
@@ -215,10 +206,10 @@
 
     numpad_layer {
       bindings = <
-        &kp Q            &kp M           &kp F           &kp P           &kp T           /**/    &hmt KP_NUM KP_MULTIPLY &kp KP_N7       &kp KP_N8           &kp KP_N9       &kp KP_SUBTRACT
-        &kp N1           &kp N2          &kp N3          &kp N4          &kp N5          /**/    &kp KP_PLUS             &kp KP_N4       &kp KP_N5           &kp KP_N6       &kp KP_DOT
-        &kp Z            &kp ESC         &kp C           &kp S           &kp B           /**/    &kp BACKSPACE           &kp KP_N1       &kp KP_N2           &kp KP_N3       &kp KP_DIVIDE
-                                                         &trans          &kp LALT        /**/    &trans                  &kp KP_N0
+        &kp Q            &kp M           &kp F           &kp P           &kp T           /**/    &hmt KP_NUM KP_MULTIPLY &kp KP_N7       &kp KP_N8           &kp KP_N9       &kp KP_DIVIDE
+        &kp N1           &kp N2          &kp N3          &kp N4          &kp N5          /**/    &kp KP_PLUS             &kp KP_N4       &kp KP_N5           &kp KP_N6       &kp KP_SUBTRACT
+        &kp Z            &kp ESC         &kp C           &kp S           &kp B           /**/    &kp BACKSPACE           &kp KP_N1       &kp KP_N2           &kp KP_N3       &kp KP_DOT
+                                                         &trans          &kp LALT        /**/    &kp KP_N0               &trans
       >;
     };
 
