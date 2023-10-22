@@ -181,7 +181,7 @@
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &hmt LA(F4) N6    &kp N7          &hmt TASK_MNG N8 &kp N9         &kp N0              &mtb RALT CARET         &kp AMPS        &kp AT              &kp HASH        &kp DLLR
         &mtb LSHFT N1     &mtb LALT N2    &hml LCTRL N3   &kp N4          &kp N5              &kp GRAVE               &kp MINUS       &kp STAR            &kp EQUAL       &mtb LSHFT SEMICOLON
-        &mtb LCTRL DOT    &kp BSPC        &mtb LG(LS(S)) PSCRN &kp DELETE &key_repeat         &kp PRCNT               &kp LBKT        &kp BSLH            &kp EXCL        &kp RBKT
+        &mtb LCTRL DOT    &kp BSPC        &mtb LC(LS(S)) PSCRN &kp DELETE &key_repeat         &kp PRCNT               &kp LBKT        &kp BSLH            &kp EXCL        &kp RBKT
     /*╰─────────────────────────────────────────────╮*/   &mo FN_L        &trans              &mo NUMROW_L            &trans          /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >;
