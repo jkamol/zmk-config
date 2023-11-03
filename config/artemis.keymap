@@ -29,12 +29,12 @@
 
 // Mouse move
 &mmv {
-  time-to-max-speed-ms = <500>;
+  time-to-max-speed-ms = <200>;
   acceleration-exponent=<1>;
 };
 // Mouse wheel
 &mwh {
-  time-to-max-speed-ms = <2000>;
+  time-to-max-speed-ms = <200>;
   acceleration-exponent=<0>;
 }; 
 
@@ -194,7 +194,7 @@
         &kp LC(LSHFT)     &mwh MWH_UP     &mmv MMV_UP     &mkp MCLK       &kp LALT            &none                   &kp K_CMENU     &kp UP              &kp PAGE_UP     &kp CAPS
         &kp LSHFT         &mmv MMV_LT     &mmv MMV_DN     &mmv MMV_RT     &kp INSERT          &kp HOME                &kp LEFT        &kp DOWN            &kp RIGHT       &mtb LSHFT END
         &mtb LCTRL LC(Z)  &mwh MWH_DN     &kp LC(C)       &kp LC(V)       &kp LGUI            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp LCTRL
-    /*╰─────────────────────────────────────────────╮*/   &mkp LCLK       &mkp RCLK           &trans                  &kp LALT        /*╭────────────────────────────────────────────────────╯*/
+    /*╰─────────────────────────────────────────────╮*/   &mkp RCLK       &mkp LCLK           &trans                  &kp LALT        /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >; 
     };
@@ -251,9 +251,9 @@
       label = "SHORT";
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &none             &kp HOME        &kp UP          &kp END         &none               &none                   &none           &none               &none           &none
-        &mtb LSHFT LC(A)  &kp LEFT        &kp DOWN        &kp RIGHT       &none               &none                   &none           &none               &none           &kp LSHFT
-        &kp LC(Z)         &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)           &none                   &none           &none               &none           &none
+        &none             &kp HOME        &kp UP          &kp END         &mkp RCLK           &none                   &none           &none               &none           &none
+        &mtb LSHFT LC(A)  &kp LEFT        &kp DOWN        &kp RIGHT       &mkp LCLK           &none                   &mkp LCLK       &mkp RCLK           &none           &kp LSHFT
+        &kp LC(Z)         &none           &kp LC(LA(LG(V))) &none         &kp LC(Y)           &none                   &none           &none               &none           &none
     /*╰─────────────────────────────────────────────╮*/   &none           &none               &trans                  &trans          /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >; 
