@@ -181,7 +181,7 @@
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &hmt LA(F4) N6    &kp N7          &hmt TASK_MNG N8 &kp N9         &kp N0              &mtb RALT CARET         &kp AMPS        &kp AT              &kp HASH        &kp DLLR
         &mtb LSHFT N1     &mtb LALT N2    &hml LCTRL N3   &kp N4          &kp N5              &kp GRAVE               &kp MINUS       &kp STAR            &kp EQUAL       &mtb LSHFT SEMICOLON
-        &mtb LCTRL DOT    &kp BSPC        &mtb LC(LS(S)) PSCRN &kp DELETE &key_repeat         &kp PRCNT               &kp LBKT        &kp BSLH            &kp EXCL        &kp RBKT
+        &mtb LCTRL DOT    &kp BSPC        &mtb LC(LS(S)) PSCRN &kp DELETE &key_repeat         &kp PRCNT               &kp LBKT        &kp BSLH            &kp EXCL        &mtb LCTRL RBKT
     /*╰─────────────────────────────────────────────╮*/   &mo FN_L        &trans              &mo NUMROW_L            &trans          /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >;
@@ -253,7 +253,7 @@
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &none             &kp HOME        &kp UP          &kp END         &mkp RCLK           &none                   &none           &none               &none           &none
         &mtb LSHFT LC(A)  &kp LEFT        &kp DOWN        &kp RIGHT       &mkp LCLK           &none                   &mkp LCLK       &mkp RCLK           &none           &kp LSHFT
-        &kp LC(Z)         &none           &kp LC(LA(LG(V))) &none         &kp LC(Y)           &none                   &none           &none               &none           &none
+        &kp LC(Z)         &none           &none           &none           &kp LC(Y)           &none                   &none           &none               &none           &none
     /*╰─────────────────────────────────────────────╮*/   &none           &none               &trans                  &trans          /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >; 
