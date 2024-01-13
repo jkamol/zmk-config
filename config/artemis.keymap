@@ -33,19 +33,19 @@
   acceleration-exponent=<1>;
 };
 // Mouse wheel
-&mwh {
+&msc {
   time-to-max-speed-ms = <200>;
   acceleration-exponent=<0>;
 }; 
 
-#define MMV_UP MOVE_VERT(-1600)
-#define MMV_DN MOVE_VERT(1600)
-#define MMV_LT MOVE_HOR(-1600)
-#define MMV_RT MOVE_HOR(1600)
-#define MWH_UP SCROLL_VERT(20)
-#define MWH_DN SCROLL_VERT(-20)
-#define MWH_LT SCROLL_HOR(-20)
-#define MWH_RT SCROLL_HOR(20)
+#define MMV_UP MOVE_Y(-1600)
+#define MMV_DN MOVE_Y(1600)
+#define MMV_LT MOVE_X(-1600)
+#define MMV_RT MOVE_X(1600)
+#define MWH_UP SCRL_Y(20)
+#define MWH_DN SCRL_Y(-20)
+#define MWH_LT SCRL_X(-20)
+#define MWH_RT SCRL_X(20)
 
 #define MAIN_L   0
 #define QWERTY_L 1
@@ -191,9 +191,9 @@
       label = "NAVI";
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &kp LC(LSHFT)     &mwh MWH_UP     &mmv MMV_UP     &mkp MCLK       &kp LALT            &none                   &kp K_CMENU     &kp UP              &kp PAGE_UP     &kp CAPS
+        &kp LC(LSHFT)     &msc MWH_UP     &mmv MMV_UP     &mkp MCLK       &kp LALT            &none                   &kp K_CMENU     &kp UP              &kp PAGE_UP     &kp CAPS
         &kp LSHFT         &mmv MMV_LT     &mmv MMV_DN     &mmv MMV_RT     &kp INSERT          &kp HOME                &kp LEFT        &kp DOWN            &kp RIGHT       &mtb LSHFT END
-        &mtb LCTRL LC(Z)  &mwh MWH_DN     &kp LC(C)       &kp LC(V)       &kp LGUI            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp LCTRL
+        &mtb LCTRL LC(Z)  &msc MWH_DN     &kp LC(C)       &kp LC(V)       &kp LGUI            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp LCTRL
     /*╰─────────────────────────────────────────────╮*/   &mkp RCLK       &mkp LCLK           &trans                  &kp LALT        /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >; 
