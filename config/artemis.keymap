@@ -156,9 +156,9 @@
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &mtb LC(LSHFT) Q  &kp L           &kp D           &kp P           &mtb RALT B         &mtb RALT J             &kp F           &kp O               &kp U           &mtb LC(LSHFT) APOS
-        &hml LSHFT C      &hml LALT R     &hml LCTRL S    &kp T           &kp G               &kp M                   &kp N           &kp A               &kp I           &hmr LSHFT Y
-        &mtb LCTRL Z      &kp X           &kp V           &kp W           &mtb LGUI K         &mtb RGUI SEMICOLON     &kp H           &kp SLASH           &kp COMMA       &mtb LCTRL DOT
-    /*╰─────────────────────────────────────────────╮*/   &mt LCTRL TAB   &lt SYM_L SPACE     &lt NAV_L E             &lt FN_L ENTER  /*╭────────────────────────────────────────────────────╯*/
+        &hml LSHFT C      &hml LALT R     &hml RCTRL S    &kp T           &kp G               &kp M                   &kp N           &kp A               &kp I           &hmr LSHFT Y
+        &mtb RCTRL Z      &kp X           &kp V           &kp W           &mtb LGUI K         &mtb RGUI SEMICOLON     &kp H           &kp SLASH           &kp COMMA       &mtb RCTRL DOT
+    /*╰─────────────────────────────────────────────╮*/   &mt RCTRL TAB   &lt SYM_L SPACE     &lt NAV_L E             &lt FN_L ENTER  /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >;  
     };
@@ -180,8 +180,8 @@
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &hmt LA(F4) N6    &kp N7          &hmt TASK_MNG N8 &kp N9         &kp N0              &mtb RALT CARET         &kp AMPS        &kp AT              &kp HASH        &kp DLLR
-        &mtb LSHFT N1     &mtb LALT N2    &hml LCTRL N3   &kp N4          &kp N5              &kp GRAVE               &kp MINUS       &kp STAR            &kp EQUAL       &mtb LSHFT SEMICOLON
-        &mtb LCTRL KP_DOT &kp BSPC        &mtb LC(LS(S)) PSCRN &kp DELETE &key_repeat         &kp PRCNT               &kp LBKT        &kp BSLH            &kp EXCL        &mtb LCTRL RBKT
+        &mtb LSHFT N1     &mtb LALT N2    &hml RCTRL N3   &kp N4          &kp N5              &kp GRAVE               &kp MINUS       &kp STAR            &kp EQUAL       &mtb LSHFT SEMICOLON
+        &mtb RCTRL KP_DOT &kp BSPC        &mtb LC(LS(S)) PSCRN &kp DELETE &key_repeat         &kp PRCNT               &kp LBKT        &kp BSLH            &kp EXCL        &mtb RCTRL RBKT
     /*╰─────────────────────────────────────────────╮*/   &mo FN_L        &trans              &mo NUMROW_L            &trans          /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >;
@@ -193,7 +193,7 @@
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &kp LC(LSHFT)     &msc MWH_UP     &mmv MMV_UP     &mkp MCLK       &kp LALT            &none                   &kp K_CMENU     &kp UP              &kp PAGE_UP     &kp CAPS
         &kp LSHFT         &mmv MMV_LT     &mmv MMV_DN     &mmv MMV_RT     &kp INSERT          &kp HOME                &kp LEFT        &kp DOWN            &kp RIGHT       &mtb LSHFT END
-        &mtb LCTRL LC(Z)  &msc MWH_DN     &kp LC(C)       &kp LC(V)       &kp LGUI            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp LCTRL
+        &mtb RCTRL LC(Z)  &msc MWH_DN     &kp LC(C)       &kp LC(V)       &kp LGUI            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp RCTRL
     /*╰─────────────────────────────────────────────╮*/   &mkp RCLK       &mkp LCLK           &trans                  &kp LALT        /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >; 
@@ -205,7 +205,7 @@
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &kp EXCL          &kp AT          &kp HASH        &kp DLLR        &kp PRCNT           &kp CARET               &kp AMPS        &kp STAR            &kp LPAR        &kp RPAR
         &mtb LSHFT N1     &kp N2          &kp N3          &kp N4          &kp N5              &kp N6                  &kp N7          &kp N8              &kp N9          &mtb LSHFT N0
-        &kp LC(Z)         &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)           &kp BACKSPACE           &kp DELETE      &kp SLASH           &kp COMMA       &mtb LCTRL DOT
+        &kp LC(Z)         &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)           &kp BACKSPACE           &kp DELETE      &kp SLASH           &kp COMMA       &mtb RCTRL DOT
     /*╰─────────────────────────────────────────────╮*/   &trans          &trans              &trans                  &trans          /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >;
@@ -217,7 +217,7 @@
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &kp N1            &kp N2          &kp N3          &kp N4          &kp N5              &kp SCROLLLOCK          &kp C_BRI_UP    &kp LC(LA(DEL))     &kp C_VOL_UP    &kp PAUSE_BREAK
         &kp F1            &kp F2          &kp F3          &kp F4          &kp F5              &kp F11                 &kp C_PREV      &kp C_PLAY_PAUSE    &kp C_MUTE      &kp C_NEXT
-        &kp F6            &kp F7          &kp F8          &kp F9          &kp F10             &kp F12                 &kp C_BRI_DN    &kp MEH             &kp C_VOL_DN    &kp LCTRL
+        &kp F6            &kp F7          &kp F8          &kp F9          &kp F10             &kp F12                 &kp C_BRI_DN    &kp MEH             &kp C_VOL_DN    &kp RCTRL
     /*╰─────────────────────────────────────────────╮*/   &mo NUMPAD_L    &kp LALT            &kp TAB                 &trans          /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >;
