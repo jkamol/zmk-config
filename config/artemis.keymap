@@ -72,11 +72,19 @@
     compatible = "zmk,combos";
 
     // shortcut
-    #define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
+    #define COMBO_A(NAME, BINDINGS, KEYPOS, TIMEOUT) \
       combo_##NAME { \
         timeout-ms = <TIMEOUT>; \
         bindings = <BINDINGS>; \
         key-positions = <KEYPOS>; \
+      };
+
+    #define COMBO_L(NAME, BINDINGS, LAYERS, KEYPOS, TIMEOUT) \
+      combo_##NAME { \
+        timeout-ms = <TIMEOUT>; \
+        bindings = <BINDINGS>; \
+        key-positions = <KEYPOS>; \
+        layers = <LAYERS>; \
       };
 
       /*                KEY POSITIONS
@@ -89,21 +97,20 @@
                   ╰────────╯ ╰─────────╯           */
 
 
-    COMBO(enter, &kp ENTER, 11 12, 30)
-    COMBO(escape, &kp ESCAPE, 1 2, 30)
-    COMBO(swlang, &kp SW_LANG, 10 11, 30)
-    COMBO(repeat, &key_repeat, 3 13, 30)
+    COMBO_L(enter, &kp ENTER, MAIN_L, 11 12, 30)
+    COMBO_L(escape, &kp ESCAPE, MAIN_L, 1 2, 30)
+    COMBO_L(swlang, &kp SW_LANG, MAIN_L, 10 11, 30)
+    COMBO_L(repeat, &key_repeat, MAIN_L, 3 13, 30)
 
-    COMBO(board_layer_mo, &mo BOARD_L, 14 24, 50)
-    COMBO(board_layer_l, &sl BOARD_L, 20 21 22 23, 100)
-    COMBO(board_layer_r, &sl BOARD_L, 26 27 28 29, 100)
-    COMBO(function_layer_tg, &tog FN_L, 15 16 25 26, 50)
-    COMBO(main_layer, &to MAIN_L, 10 11 12 13, 100)
-    COMBO(mirror_layer_mo, &mo SHCT_L, 30 31, 30)
-    COMBO(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
-    COMBO(numpad_layer_tg, &tog NUMPAD_L, 13 14 23 24, 50)
-    COMBO(numrow_layer_mo, &mo NUMROW_L, 31 32, 50)
-    COMBO(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
+    COMBO_A(board_layer_mo, &mo BOARD_L, 14 24, 50)
+    COMBO_A(board_layer_r, &sl BOARD_L, 26 27 28 29, 100)
+    COMBO_A(function_layer_tg, &tog FN_L, 15 16 25 26, 50)
+    COMBO_A(main_layer, &to MAIN_L, 20 21 22 23, 100)
+    COMBO_A(mirror_layer_mo, &mo SHCT_L, 30 31, 30)
+    COMBO_A(numpad_layer_mo, &mo NUMPAD_L, 13 23, 50)
+    COMBO_A(numpad_layer_tg, &tog NUMPAD_L, 13 14 23 24, 50)
+    COMBO_A(numrow_layer_mo, &mo NUMROW_L, 31 32, 50)
+    COMBO_A(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
   };
 
   behaviors {
