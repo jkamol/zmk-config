@@ -111,6 +111,7 @@
     COMBO_A(numpad_layer_tg, &tog NUMPAD_L, 13 14 23 24, 50)
     COMBO_A(numrow_layer_mo, &mo NUMROW_L, 31 32, 50)
     COMBO_A(qwerty_layer, &to QWERTY_L, 0 1 2 3, 100)
+    COMBO_A(nav_layer_to, &to NAV_L, 32 33, 50)
   };
 
   behaviors {
@@ -201,7 +202,7 @@
         &kp LC(LSHFT)     &msc MWH_UP     &mmv MMV_UP     &mkp MCLK       &kp LALT            &none                   &kp K_CMENU     &kp UP              &kp PAGE_UP     &kp CAPS
         &kp LSHFT         &mmv MMV_LT     &mmv MMV_DN     &mmv MMV_RT     &kp INSERT          &kp HOME                &kp LEFT        &kp DOWN            &kp RIGHT       &mtb LSHFT END
         &mtb RCTRL LC(Z)  &msc MWH_DN     &kp LC(C)       &kp LC(V)       &kp LGUI            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp RCTRL
-    /*╰─────────────────────────────────────────────╮*/   &mkp RCLK       &mkp LCLK           &trans                  &kp LALT        /*╭────────────────────────────────────────────────────╯*/
+    /*╰─────────────────────────────────────────────╮*/   &mkp RCLK       &mkp LCLK           &to MAIN_L              &kp LALT        /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >; 
     };
