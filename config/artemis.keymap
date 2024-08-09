@@ -187,9 +187,9 @@
       label = "SYM";
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &hmt LA(F4) N6    &kp N7          &hmt TASK_MNG N8 &kp N9         &kp N0              &mtb RALT CARET         &kp AMPS        &kp AT              &kp HASH        &kp DLLR
-        &mtb LSHFT N1     &mtb LALT N2    &hml RCTRL N3   &kp N4          &kp N5              &kp GRAVE               &kp MINUS       &kp STAR            &kp EQUAL       &mtb LSHFT SEMICOLON
-        &mtb RCTRL KP_DOT &kp BSPC        &mtb LC(LS(S)) PSCRN &kp DELETE &key_repeat         &kp PRCNT               &kp LBKT        &kp BSLH            &kp EXCL        &mtb RCTRL RBKT
+        &hmt LA(F4) N6    &kp N7          &hmt TASK_MNG N8 &kp N9         &kp N0              &mtb RALT CARET         &kp PRCNT       &kp STAR            &kp UNDERSCORE  &kp DLLR
+        &mtb LSHFT N1     &mtb LALT N2    &hml RCTRL N3   &kp N4          &kp N5              &kp AMPS                &kp MINUS       &kp AT              &kp EQUAL       &mtb LSHFT GRAVE
+        &mtb RCTRL KP_DOT &kp BSPC        &mtb LC(LS(S)) PSCRN &kp DELETE &key_repeat         &kp EXCL                &kp HASH        &kp BSLH            &kp LBKT        &mtb RCTRL RBKT
     /*╰─────────────────────────────────────────────╮*/   &mo FN_L        &trans              &mo NUMROW_L            &trans          /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >;
@@ -202,7 +202,7 @@
         &kp LC(LSHFT)     &msc MWH_UP     &mmv MMV_UP     &mkp MCLK       &kp LALT            &none                   &kp K_CMENU     &kp UP              &kp PAGE_UP     &kp CAPS
         &kp LSHFT         &mmv MMV_LT     &mmv MMV_DN     &mmv MMV_RT     &kp INSERT          &kp HOME                &kp LEFT        &kp DOWN            &kp RIGHT       &mtb LSHFT END
         &mtb RCTRL LC(Z)  &msc MWH_DN     &kp LC(C)       &kp LC(V)       &kp LGUI            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp RCTRL
-    /*╰─────────────────────────────────────────────╮*/   &mkp RCLK       &mkp LCLK           &to MAIN_L              &kp LALT        /*╭────────────────────────────────────────────────────╯*/
+    /*╰─────────────────────────────────────────────╮*/   &mkp RCLK       &mkp LCLK           &to MAIN_L              &kp ENTER       /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >; 
     };
