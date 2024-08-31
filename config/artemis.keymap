@@ -200,7 +200,7 @@
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &kp LC(LSHFT)     &msc MWH_UP     &mmv MMV_UP     &mkp MCLK       &kp LALT            &none                   &kp K_CMENU     &kp UP              &kp PAGE_UP     &kp CAPS
-        &kp LSHFT         &mmv MMV_LT     &mmv MMV_DN     &mmv MMV_RT     &kp INSERT          &kp HOME                &kp LEFT        &kp DOWN            &kp RIGHT       &mtb LSHFT END
+        &kp LS(ESCAPE)    &mmv MMV_LT     &mmv MMV_DN     &mmv MMV_RT     &kp INSERT          &kp HOME                &kp LEFT        &kp DOWN            &kp RIGHT       &mtb LSHFT END
         &mtb RCTRL LC(Z)  &msc MWH_DN     &kp LC(C)       &kp LC(V)       &kp LGUI            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp RCTRL
     /*╰─────────────────────────────────────────────╮*/   &mkp RCLK       &mkp LCLK           &to MAIN_L              &kp ENTER       /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
