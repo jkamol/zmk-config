@@ -187,8 +187,8 @@
       label = "SYM";
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &hmt LA(F4) N6    &kp N7          &hmt TASK_MNG N8 &kp N9         &kp N0              &mtb RALT CARET         &kp PRCNT       &kp STAR            &kp UNDERSCORE  &kp DLLR
-        &mtb LSHFT N1     &mtb LALT N2    &hml RCTRL N3   &kp N4          &kp N5              &kp AMPS                &kp MINUS       &kp AT              &kp EQUAL       &mtb LSHFT GRAVE
+        &hmt LA(F4) N6    &kp N7          &hmt TASK_MNG N8 &kp N9         &kp N0              &mtb RALT CARET         &kp AMPS        &kp STAR            &kp UNDERSCORE  &kp DLLR
+        &mtb LSHFT N1     &mtb LALT N2    &hml RCTRL N3   &kp N4          &kp N5              &kp PRCNT               &kp MINUS       &kp AT              &kp EQUAL       &mtb LSHFT GRAVE
         &mtb RCTRL KP_DOT &kp BSPC        &mtb LC(LS(S)) PSCRN &kp DELETE &key_repeat         &kp EXCL                &kp HASH        &kp BSLH            &kp LBKT        &mtb RCTRL RBKT
     /*╰─────────────────────────────────────────────╮*/   &mo FN_L        &trans              &mo NUMROW_L            &trans          /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
