@@ -4,10 +4,13 @@
  * SPDX-License-Identifier: MIT
  */
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 
 &sk {
@@ -29,33 +32,36 @@
 
 // Mouse move
 &mmv {
+  x-input-code = <INPUT_REL_X>;
+  y-input-code = <INPUT_REL_Y>;
   time-to-max-speed-ms = <400>;
-  acceleration-exponent=<1>;
+  acceleration-exponent = <1>;
 };
 // Mouse wheel
 &msc {
+  x-input-code = <INPUT_REL_HWHEEL>;
+  y-input-code = <INPUT_REL_WHEEL>;
   time-to-max-speed-ms = <200>;
-  acceleration-exponent=<0>;
-}; 
+  acceleration-exponent = <0>;
+};
 
-#define MMV_UP MOVE_Y(-1600)
-#define MMV_DN MOVE_Y(1600)
-#define MMV_LT MOVE_X(-1600)
-#define MMV_RT MOVE_X(1600)
-#define MWH_UP SCRL_Y(20)
-#define MWH_DN SCRL_Y(-20)
-#define MWH_LT SCRL_X(-20)
-#define MWH_RT SCRL_X(20)
+#define SLMV_RIGHT MOVE_X(50)
+#define SLMV_LEFT MOVE_X(-50)
+#define SLMV_UP MOVE_Y(50)
+#define SLMV_DOWN MOVE_Y(-50)
+#define SLSC_UP MOVE_Y(10)
+#define SLSC_DOWN MOVE_Y(-10)
 
 #define MAIN_L   0
 #define QWERTY_L 1
 #define SYM_L    2
 #define NAV_L    3
-#define NUMROW_L 4
-#define FN_L     5
-#define NUMPAD_L 6
-#define BOARD_L  7
-#define SHCT_L   8
+#define SLNAV_L  4
+#define NUMROW_L 5
+#define FN_L     6
+#define NUMPAD_L 7
+#define BOARD_L  8
+#define SHCT_L   9
 
 #define MEH LC(LA(LSHFT))
 #define SW_LANG LA(LSHFT)
@@ -214,9 +220,21 @@
       label = "NAVI";
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &kp LC(LSHFT)     &msc MWH_UP     &mmv MMV_UP     &mkp MCLK       &kp LALT            &none                   &kp K_CMENU     &kp UP              &kp PAGE_UP     &kp CAPS
-        &mtb LSHFT ESCAPE &mmv MMV_LT     &mmv MMV_DN     &mmv MMV_RT     &kp INSERT          &kp HOME                &kp LEFT        &kp DOWN            &kp RIGHT       &mtb LSHFT END
-        &mtb RCTRL LC(Z)  &msc MWH_DN     &kp LC(C)       &kp LC(V)       &kp LGUI            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp RCTRL
+        &kp LC(LSHFT)     &msc SCRL_UP    &mmv MOVE_UP    &mkp MCLK       &kp LALT            &mo SLNAV_L             &kp K_CMENU     &kp UP              &kp PAGE_UP     &kp CAPS
+        &mtb LSHFT ESCAPE &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &kp INSERT          &kp HOME                &kp LEFT        &kp DOWN            &kp RIGHT       &mtb LSHFT END
+        &mtb RCTRL LC(Z)  &msc SCRL_DOWN  &kp LC(C)       &kp LC(V)       &kp LGUI            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp RCTRL
+    /*╰─────────────────────────────────────────────╮*/   &mkp RCLK       &mkp LCLK           &to MAIN_L              &kp ENTER       /*╭────────────────────────────────────────────────────╯*/
+    //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
+      >; 
+    };
+
+    slow_nav_layer {
+      label = "SLNAVI";
+      bindings = <
+    //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
+        &kp LC(LSHFT)     &msc SLSC_UP    &mmv SLMV_UP    &mkp MCLK       &kp LALT            &none                   &kp K_CMENU     &kp UP              &kp PAGE_UP     &kp CAPS
+        &mtb LSHFT ESCAPE &mmv SLMV_LEFT  &mmv SLMV_DOWN  &mmv SLMV_RIGHT &kp INSERT          &kp HOME                &kp LEFT        &kp DOWN            &kp RIGHT       &mtb LSHFT END
+        &mtb RCTRL LC(Z)  &msc SLSC_DOWN  &kp LC(C)       &kp LC(V)       &kp LGUI            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp RCTRL
     /*╰─────────────────────────────────────────────╮*/   &mkp RCLK       &mkp LCLK           &to MAIN_L              &kp ENTER       /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >; 
