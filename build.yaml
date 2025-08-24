@@ -13,11 +13,11 @@
 #
 ---
 include:
+  # - board: nice_nano_v2
+  #   shield: artemis_left
+  # - board: nice_nano_v2
+  #   shield: artemis_right
   - board: nice_nano_v2
-    shield: artemis_left
+    shield: cradio_left
   - board: nice_nano_v2
-    shield: artemis_right
-  - board: nice_nano_v2
-    shield: rae_dux_left
-  - board: nice_nano_v2
-    shield: rae_dux_right
+    shield: cradio_right
