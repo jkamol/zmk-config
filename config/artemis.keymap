@@ -47,9 +47,9 @@
 
 #define SLMV_RIGHT MOVE_X(50)
 #define SLMV_LEFT MOVE_X(-50)
-#define SLMV_UP MOVE_Y(50)
-#define SLMV_DOWN MOVE_Y(-50)
-#define SLSC_UP MOVE_Y(10)
+#define SLMV_UP MOVE_Y(-50)
+#define SLMV_DOWN MOVE_Y(50)
+#define SLSC_UP MOVE_Y(5)
 #define SLSC_DOWN MOVE_Y(-10)
 
 #define MAIN_L   0
