@@ -180,6 +180,13 @@
       tap-ms = <5>;
       bindings = <&kp LG(SPACE) &kp LG(N4)>;
     };
+    scshot_td: screenshot_tap_dance {
+      compatible = "zmk,behavior-tap-dance";
+      display-name = "SCREENSHOT_TAP_DANCE";
+      #binding-cells = <0>;
+      tapping-term-ms = <300>;
+      bindings = <&kp LG(LS(N4))>, <&kp LG(LS(N5))>, <&kp LG(LS(S))>;
+    };
   };
 
   keymap {
@@ -191,7 +198,7 @@
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &mtb LC(LSHFT) Q  &kp L           &kp D           &kp P           &mtb RALT B         &mtb RALT J             &kp F           &kp O               &kp U           &mtb LG(LSHFT) APOS
-        &hml LSHFT C      &hml LGUI R     &hml LCTRL S    &kp T           &kp G               &kp M                   &kp N           &hml RCTRL A        &kp I           &hmr RSHFT Y
+        &hml LSHFT C      &hml LGUI R     &hml LCTRL S    &kp T           &kp G               &kp M                   &kp N           &hmr RCTRL A        &kp I           &hmr RSHFT Y
         &mtb LGUI Z       &kp X           &kp V           &kp W           &mtb LALT K         &mtb LALT SEMICOLON     &kp H           &kp SLASH           &kp COMMA       &mtb RGUI DOT
     /*╰─────────────────────────────────────────────╮*/   &mt LGUI TAB    &lt SYM_L SPACE     &lt NAV_L E             &lt FN_L ENTER  /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
@@ -216,7 +223,7 @@
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &hmt LA(F4) N6    &kp N7          &hmt TASK_MNG N8 &kp N9         &kp N0              &mtb RALT CARET         &kp AMPS        &kp STAR            &kp UNDERSCORE  &kp DLLR
         &mtb LSHFT N1     &mtb LGUI N2    &hml RCTRL N3   &kp N4          &kp N5              &kp PRCNT               &kp MINUS       &kp AT              &kp EQUAL       &mtb RSHFT GRAVE
-        &mtb LGUI KP_DOT  &kp BSPC        &mtb LG(LS(S)) LG(LS(N5)) &kp DELETE &key_repeat    &kp EXCL                &kp HASH        &kp BSLH            &kp LBKT        &mtb RGUI RBKT
+        &mtb LGUI KP_DOT  &kp BSPC        &scshot_td      &kp DELETE      &key_repeat         &kp EXCL                &kp HASH        &kp BSLH            &kp LBKT        &mtb RGUI RBKT
     /*╰─────────────────────────────────────────────╮*/   &mo FN_L        &trans              &mo NUMROW_L            &trans          /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
       >;
@@ -227,7 +234,7 @@
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &kp LC(LSHFT)     &msc SCRL_DOWN  &mmv MOVE_UP    &mkp MCLK       &kp RALT            &mo SLNAV_L             &kp K_CMENU     &kp UP              &kp PAGE_UP     &kp CAPS
-        &mtb LSHFT LG(C)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &kp INSERT          &kp LG(LEFT)            &kp LEFT        &kp DOWN            &kp RIGHT       &mtb RSHFT LG(RIGHT)
+        &mtb LSHFT LG(C)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &kp INSERT          &kp HOME                &kp LEFT        &kp DOWN            &kp RIGHT       &mtb RSHFT END
         &mtb LGUI LG(Z)   &msc SCRL_UP    &kp LG(V)       &kp LG(W)       &kp LCTL            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp RGUI
     /*╰─────────────────────────────────────────────╮*/   &mkp RCLK       &mkp LCLK           &to MAIN_L              &kp ENTER       /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
