@@ -233,7 +233,7 @@
       display-name = "NAVI";
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &kp LC(LSHFT)     &msc SCRL_DOWN  &mmv MOVE_UP    &mkp MCLK       &kp RALT            &mo SLNAV_L             &kp K_CMENU     &kp UP              &kp PAGE_UP     &kp CAPS
+        &kp LC(LSHFT)     &msc SCRL_DOWN  &mmv MOVE_UP    &mkp MCLK       &kp RALT            &mo SLNAV_L             &kp LC(DOWN)    &kp UP              &kp PAGE_UP     &kp CAPS
         &mtb LSHFT LG(C)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &kp INSERT          &kp HOME                &kp LEFT        &kp DOWN            &kp RIGHT       &mtb RSHFT END
         &mtb LGUI LG(Z)   &msc SCRL_UP    &kp LG(V)       &kp LG(W)       &kp LCTL            &kp BACKSPACE           &kp DELETE      &kp SW_LANG         &kp PAGE_DOWN   &kp RGUI
     /*╰─────────────────────────────────────────────╮*/   &mkp RCLK       &mkp LCLK           &to MAIN_L              &kp ENTER       /*╭────────────────────────────────────────────────────╯*/
