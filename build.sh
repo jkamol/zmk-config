@@ -1,7 +1,9 @@
 cd /workspaces/zmk/app
 west build -p -d build/left -b nice_nano_v2 -- -DSHIELD=a_dux_left -DZMK_CONFIG="../../zmk-config/config"
 west build -p -d build/right -b nice_nano_v2 -- -DSHIELD=a_dux_right -DZMK_CONFIG="../../zmk-config/config"
+cp build/left/zephyr/zmk.uf2 /workspaces/zmk-config/a_dux_left.uf2
+cp build/right/zephyr/zmk.uf2 /workspaces/zmk-config/a_dux_right.uf2
 # west build -p -d build/left -b nice_nano_v2 -- -DSHIELD=sweep_left -DZMK_CONFIG="../../zmk-config/config"
 # west build -p -d build/right -b nice_nano_v2 -- -DSHIELD=sweep_right -DZMK_CONFIG="../../zmk-config/config"
-cp build/left/zephyr/zmk.uf2 /workspaces/zmk-firmwares/zmk_left.uf2
-cp build/right/zephyr/zmk.uf2 /workspaces/zmk-firmwares/zmk_right.uf2
+# cp build/left/zephyr/zmk.uf2 /workspaces/zmk-config/sweep_left.uf2
+# cp build/right/zephyr/zmk.uf2 /workspaces/zmk-config/sweep_right.uf2
