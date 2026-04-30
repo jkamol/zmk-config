@@ -221,7 +221,7 @@
       display-name = "SYM";
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-        &hmt LA(F4) N6    &kp N7          &hmt TASK_MNG N8 &kp N9         &kp N0              &mtb RALT CARET         &kp AMPS        &kp STAR            &kp UNDERSCORE  &kp DLLR
+        &hmt LG(LC(Q)) N6 &kp N7          &hmt TASK_MNG N8 &kp N9         &kp N0              &mtb RALT CARET         &kp AMPS        &kp STAR            &kp UNDERSCORE  &kp DLLR
         &mtb LSHFT N1     &mtb LGUI N2    &hml RCTRL N3   &kp N4          &kp N5              &kp PRCNT               &kp MINUS       &kp AT              &kp EQUAL       &mtb RSHFT GRAVE
         &mtb LGUI KP_DOT  &kp BSPC        &scshot_td      &kp DELETE      &key_repeat         &kp EXCL                &kp HASH        &kp BSLH            &kp LBKT        &mtb RGUI RBKT
     /*╰─────────────────────────────────────────────╮*/   &mo FN_L        &trans              &mo NUMROW_L            &trans          /*╭────────────────────────────────────────────────────╯*/
@@ -306,7 +306,7 @@
       bindings = <
     //╭──────────────────────────────────────────────────────────────────────────────────╮  ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
         &to MAIN_L        &kp LG(GRAVE)   &kp UP          &kp END         &mkp RCLK           &none                   &none           &none               &none           &none
-        &mtb LSHFT LG(A)  &kp LEFT        &kp DOWN        &kp RIGHT       &mkp LCLK           &none                   &mkp LCLK       &mkp RCLK           &none           &kp RSHFT
+        &mtb LSHFT LG(A)  &kp LEFT        &kp DOWN        &kp RIGHT       &mkp LCLK           &none                   &none           &mkp LCLK           &mkp RCLK       &kp RSHFT
         &kp LG(Z)         &kp BSPC        &kp LG(LA(LS(V))) &clipboard    &kp LG(Y)           &none                   &https          &none               &none           &none
     /*╰─────────────────────────────────────────────╮*/   &trans          &trans              &trans                  &trans          /*╭────────────────────────────────────────────────────╯*/
     //                                              ╰────────────────────────────────────╯  ╰───────────────────────────────────────────╯
